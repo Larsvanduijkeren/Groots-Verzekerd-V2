@@ -49,7 +49,7 @@ $email = get_field('email', 'option');
 
                 <?php if (empty($email) === false) : ?>
                     <a class="email btn-ghost" href="mailto:<?php echo $email; ?>">
-                        Email
+                        <?php echo $email; ?>
                     </a>
                 <?php endif; ?>
             </div>

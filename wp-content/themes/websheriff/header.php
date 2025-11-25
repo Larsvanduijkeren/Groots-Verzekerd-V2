@@ -86,7 +86,7 @@ $mega_menus = get_field('mega_menus', 'option');
                         <?php endif; ?>
 
                         <?php if (empty($app_link) === false) : ?>
-                            <a href="<?php echo $app_link; ?>" target="_blank">
+                            <a class="log-in" href="<?php echo $app_link; ?>" target="_blank">
                                 Log in
                             </a>
                         <?php endif; ?>

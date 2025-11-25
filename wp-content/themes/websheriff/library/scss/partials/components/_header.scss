@@ -44,7 +44,7 @@ header.header {
 
         .logo {
             display: block;
-            height: 80px;
+            height: 75px;
             margin-right: 60px;
             font-size: 0;
             flex-grow: 0;
@@ -75,8 +75,33 @@ header.header {
                     margin-left: auto;
 
                     a {
-                        margin-left: 20px;
+                        margin-left: 30px;
                         font-weight: 400;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            color: $orange;
+                        }
+
+                        &:before {
+                            @extend .icon-font;
+                            content: '\e90a';
+                            margin-right: 10px;
+                            font-size: 1.1rem;
+                        }
+
+                        &.email:before {
+                            content: '\e909';
+                        }
+
+                        &.log-in:before {
+                            content: '\e912';
+                            font-size: 1.15rem;
+                        }
                     }
                 }
 
@@ -89,7 +114,7 @@ header.header {
                         display: inline-block;
                         position: relative;
                         cursor: pointer;
-                        margin: 0 15px 0 0;
+                        margin: 0 20px 0 0;
 
                         a {
                             font-size: .9rem;
@@ -131,7 +156,7 @@ header.header {
                             display: inline-block;
                             position: relative;
                             cursor: pointer;
-                            margin: 0 15px;
+                            margin: 0 20px;
 
                             &:first-child {
                                 margin-left: 0;
@@ -147,7 +172,7 @@ header.header {
                                 display: block;
                                 z-index: 5;
                                 font-weight: 400;
-                                font-size: 1.25rem;
+                                font-size: 1.2rem;
                                 color: $text;
                                 position: relative;
                                 font-family: $font-body;
@@ -195,7 +220,7 @@ header.header {
                                 position: relative;
 
                                 > a {
-                                    padding-right: 15px;
+                                    padding-right: 20px;
 
                                     &:before {
                                         @extend .icon-font;

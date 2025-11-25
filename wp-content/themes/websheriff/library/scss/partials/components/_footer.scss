@@ -33,6 +33,22 @@ footer.footer {
                 display: flex;
                 width: 100%;
                 margin-bottom: 10px;
+
+                &:before {
+                    @extend .icon-font;
+                    content: '\e90a';
+                    margin-right: 10px;
+                    font-size: 1.1rem;
+                }
+
+                &.email:before {
+                    content: '\e909';
+                }
+
+                &.log-in:before {
+                    content: '\e912';
+                    font-size: 1.15rem;
+                }
             }
 
             ul {
