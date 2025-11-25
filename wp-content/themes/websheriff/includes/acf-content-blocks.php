@@ -19,9 +19,30 @@ add_action('acf/init', function () {
     if (function_exists('acf_register_block')) {
 
         $blocks = [
-            'hero'                 => 'Hero',
+            'hero'                => 'Hero',
+            'home-hero'           => 'Home Hero',
+            'cta-cards'           => 'CTA Cards',
+            'logos'               => 'Logos',
+            'steps'               => 'Steps',
+            'review-slider'       => 'Review Slider',
+            'values'              => 'Values',
+            'team-selection'      => 'Team Selection',
+            'post-selection'      => 'Post Selection',
+            'google-reviews'      => 'Google Reviews',
+            'insurance-selection' => 'Insurance Selection',
+            'text'                => 'Text',
+            'text-image'          => 'Text Image',
+            'timeline'            => 'Timeline',
+            'cta'                 => 'CTA',
+            'documents'           => 'Documents',
+            'contact-cards'       => 'Contact Cards',
+            'form'                => 'Form',
+            'emergency-contacts'  => 'Emergency Contacts',
+            'faq'                 => 'FAQ',
+            'text-cards'          => 'Text Cards',
+            'vacancy-selection'   => 'Vacancy Selection',
+            'pricing'             => 'Pricing',
         ];
-
 
         foreach ($blocks as $name => $title) {
             acf_register_block([

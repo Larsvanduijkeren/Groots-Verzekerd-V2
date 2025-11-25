@@ -50,7 +50,28 @@
     @import "partials/components/single-post";
 
     // Gutenberg
+    @import "partials/components/gutenberg/contact-cards";
+    @import "partials/components/gutenberg/cta";
+    @import "partials/components/gutenberg/cta-cards";
+    @import "partials/components/gutenberg/documents";
+    @import "partials/components/gutenberg/emergency-contact";
+    @import "partials/components/gutenberg/faq";
+    @import "partials/components/gutenberg/form";
+    @import "partials/components/gutenberg/google-reviews";
     @import "partials/components/gutenberg/hero";
+    @import "partials/components/gutenberg/home-hero";
+    @import "partials/components/gutenberg/insurance-selection";
+    @import "partials/components/gutenberg/logos";
+    @import "partials/components/gutenberg/post-selection";
+    @import "partials/components/gutenberg/review-slider";
+    @import "partials/components/gutenberg/steps";
+    @import "partials/components/gutenberg/team-selection";
+    @import "partials/components/gutenberg/text";
+    @import "partials/components/gutenberg/text-image";
+    @import "partials/components/gutenberg/timeline";
+    @import "partials/components/gutenberg/vacancy-selection";
+    @import "partials/components/gutenberg/values";
+    @import "partials/components/gutenberg/pricing";
 
 
     .card {
