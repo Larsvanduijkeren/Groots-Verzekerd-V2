@@ -20,6 +20,10 @@
 wp_body_open();
 
 $logo = get_field('logo', 'option');
+$phone = get_field('phone', 'option');
+$email = get_field('email', 'option');
+$app_link = get_field('app_link', 'option');
+$buttons = get_field('buttons', 'option');
 ?>
 
 <span class="hamburger">
@@ -43,7 +47,7 @@ $logo = get_field('logo', 'option');
 
 <header class='header'>
     <div class='container'>
-        <div class='top-wrapper'>
+        <div class='flex-wrapper'>
             <a href='/' class='logo'>
                 Logo Groots Verzekerd
                 <?php
@@ -51,40 +55,53 @@ $logo = get_field('logo', 'option');
                     <img src='<?php echo $logo['sizes']['large']; ?>' alt=''>
                 <?php endif; ?>
             </a>
+            <div class="header-wrapper">
+                <div class="top-wrapper">
+                    <?php wp_nav_menu(['theme_location' => 'header-top-nav']); ?>
 
-            <?php wp_nav_menu(['theme_location' => 'header-nav']); ?>
-
-            <div class="right">
-                <?php if (empty($header_button) === false) {
-                    echo sprintf('<a href="%s" target="%s" class="btn blue">%s</a>', $header_button['url'], $header_button['target'], $header_button['title']);
-                } ?>
-            </div>
-        </div>
-
-        <div class="bottom-wrapper">
-            <?php if (empty($usps) === false) : ?>
-                <div class="usps">
-                    <?php foreach ($usps as $usp) : ?>
-                        <?php if (empty($usp['usp']) === false) : ?>
-                            <div class="usp"><?php echo $usp['usp']; ?></div>
+                    <div class="right">
+                        <?php if(empty($phone) === false) : ?>
+                            <a class="phone" href="tel:<?php echo $phone; ?>">
+                                <?php echo $phone; ?>
+                            </a>
                         <?php endif; ?>
-                    <?php endforeach; ?>
+
+                        <?php if(empty($email) === false) : ?>
+                            <a class="email" href="mailto:<?php echo $email; ?>">
+                                Email
+                            </a>
+                        <?php endif; ?>
+
+<?php if(empty($app_link) === false) : ?>
+    <a href="<?php echo $app_link; ?>" target="_blank">
+        Log in
+    </a>
+<?php endif; ?>
+                    </div>
                 </div>
-            <?php endif; ?>
 
-            <div class="right">
-                <?php if (empty($header_image) === false) : ?>
-                        <img src="<?php echo $header_image['sizes']['medium']; ?>"
-                             alt="<?php echo $header_image['alt']; ?>">
-                <?php endif; ?>
+                <div class="bottom-wrapper">
+                    <?php wp_nav_menu(['theme_location' => 'main-nav']); ?>
 
-                <?php if (empty($header_extra_button) === false) {
-                    echo sprintf('<a href="%s" target="%s" class="btn white small">%s</a>', $header_extra_button['url'], $header_extra_button['target'], $header_extra_button['title']);
-                } ?>
-
-                <span class="lang">Lang switch</span>
+                    <?php if(empty($buttons) === false) :
+                        $class = 'btn-ghost';
+                        ?>
+<div class="buttons">
+    <?php foreach ($buttons as $key => $button) :
+        if($key === 1) {
+            $class = 'btn';
+        }
+        ?>
+        <?php if(empty($button['button']) === false) {
+            echo sprintf('<a href="%s" target="%s" class="btn %s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
+        } ?>
+    <?php endforeach; ?>
+</div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
+    </div>
 </header>
 
 <main id="main-content" class="page-content" role="main">
