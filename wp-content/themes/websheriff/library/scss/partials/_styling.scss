@@ -17,25 +17,15 @@ section {
             margin-right: 10px;
             font-size: 1.2rem;
             margin-top: 3px;
-            color: $green;
+            color: $orange;
         }
     }
 }
 
-section:not(.grey):not(.blue) {
+section:not(.blue) {
     overflow: hidden;
 
-    + section:not(.grey):not(.blue) .container {
-        padding-top: 0 !important;
-    }
-}
-
-
-section.grey {
-    overflow: hidden;
-    background: $light-grey;
-
-    + section.grey .container {
+    + section:not(.blue) .container {
         padding-top: 0 !important;
     }
 }

@@ -86,14 +86,14 @@ $buttons = get_field('buttons', 'option');
                     <?php if(empty($buttons) === false) :
                         $class = 'btn-ghost';
                         ?>
-<div class="buttons">
+<div class="header-buttons">
     <?php foreach ($buttons as $key => $button) :
         if($key === 1) {
             $class = 'btn';
         }
         ?>
         <?php if(empty($button['button']) === false) {
-            echo sprintf('<a href="%s" target="%s" class="btn %s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
+            echo sprintf('<a href="%s" target="%s" class="%s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
         } ?>
     <?php endforeach; ?>
 </div>

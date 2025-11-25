@@ -85,7 +85,7 @@ header.header {
                 position: relative;
                 z-index: 5;
 
-                .buttons {
+                .header-buttons {
                     text-align: right;
                     margin-left: auto;
                     flex-grow: 0;
@@ -93,8 +93,8 @@ header.header {
                     margin-right: 0;
 
                     .btn {
-                        margin-right: 0;
-                        margin-left: 10px;
+                        margin-right: 0 ;
+                        margin-left: 5px ;
                     }
                 }
 

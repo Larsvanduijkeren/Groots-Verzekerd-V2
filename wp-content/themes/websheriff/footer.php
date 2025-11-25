@@ -18,7 +18,7 @@ $email = get_field('email', 'option');
                 <?php if (empty($logo) === false) : ?>
                     <img class="logo" src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>">
                 <?php endif; ?>
-                
+
                 <?php if(empty($footer_text) === false) {
                     echo $footer_text;
                 } ?>
@@ -48,7 +48,7 @@ $email = get_field('email', 'option');
                 <?php endif; ?>
 
                 <?php if (empty($email) === false) : ?>
-                    <a class="email btn" href="mailto:<?php echo $email; ?>">
+                    <a class="email btn-ghost" href="mailto:<?php echo $email; ?>">
                         Email
                     </a>
                 <?php endif; ?>

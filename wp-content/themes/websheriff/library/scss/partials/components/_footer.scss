@@ -1,6 +1,6 @@
 footer.footer {
     border-top: 1px solid $text;
-    
+
     .flex-wrapper {
         display: flex;
         align-items: flex-start;
@@ -14,6 +14,10 @@ footer.footer {
             flex-basis: calc(33.333% - 40px);
             margin: 20px;
 
+            .h4 {
+                font-weight: 700;
+            }
+
             > *:last-child {
                 margin-bottom: 0;
             }
@@ -24,8 +28,9 @@ footer.footer {
                 margin-bottom: 20px;
             }
 
-            .btn {
-                display: block;
+            .btn,
+            .btn-ghost {
+                display: flex;
                 width: 100%;
                 margin-bottom: 10px;
             }
@@ -59,6 +64,14 @@ footer.footer {
             max-width: calc(33.333% - 40px);
             flex-basis: calc(33.333% - 40px);
             margin: 20px;
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                text-align: right;
+            }
         }
     }
 
