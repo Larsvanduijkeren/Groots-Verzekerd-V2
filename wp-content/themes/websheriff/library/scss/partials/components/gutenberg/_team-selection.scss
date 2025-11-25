@@ -19,6 +19,18 @@ section.team-selection {
             align-items: flex-start;
             justify-content: flex-start;
 
+            &:nth-child(3n + 1) .image img {
+                clip-path: url(#imageCloverClip);
+            }
+
+            &:nth-child(3n + 2) .image img {
+                clip-path: url(#imageBubbleClip);
+            }
+
+            &:nth-child(3n + 3) .image img {
+                clip-path: url(#imageHouseClip);
+            }
+
             .image {
                 display: block;
                 margin-bottom: 20px;
