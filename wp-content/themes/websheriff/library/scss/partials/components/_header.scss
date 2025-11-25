@@ -1,3 +1,26 @@
+#wpadminbar {
+    display: none;
+
+    #wp-admin-bar-customize,
+    #wp-admin-bar-updates,
+    #wp-admin-bar-comments,
+    #wp-admin-bar-new-content,
+    #wp-admin-bar-woocommerce-site-visibility-badge,
+    #wp-admin-bar-rank-math,
+    #wp-admin-bar-wp-logo {
+        display: none !important;
+    }
+
+    #wp-admin-bar-my-account a {
+        font-size: 0;
+
+        .display-name {
+            font-size: 13px;
+        }
+    }
+}
+
+
 header.header {
     position: fixed;
     left: 0;
@@ -163,6 +186,38 @@ header.header {
                                 }
                             }
 
+                            &.has-mega-menu,
+                            &.trigger-menu-1,
+                            &.trigger-menu-2,
+                            &.trigger-menu-3,
+                            &.trigger-menu-4,
+                            &.trigger-menu-5 {
+                                position: relative;
+
+                                > a {
+                                    padding-right: 15px;
+
+                                    &:before {
+                                        @extend .icon-font;
+                                        content: '\e904';
+                                        position: absolute;
+                                        right: 0;
+                                        left: auto;
+                                        font-size: 0.6rem;
+                                        top: 50%;
+                                        width: auto;
+                                        height: auto;
+                                        background: transparent;
+                                        transform: translate(0, -50%);
+                                        transition: transform 0.3s ease-in-out;
+                                    }
+
+                                    &:after {
+                                        content: none;
+                                    }
+                                }
+                            }
+
                             &.menu-item-has-children {
                                 position: relative;
 
@@ -308,10 +363,20 @@ header.header {
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    header.header {
-        .logo {
-            height: 50px !important;
+
+@media only screen and (min-width: 1200px) {
+    #wpadminbar {
+        display: block !important;
+    }
+
+    .admin-bar {
+        .mega-menu {
+            top: 182px;
+            height: calc(100% - 182px);
+        }
+
+        header.header {
+            top: 32px;
         }
     }
 }

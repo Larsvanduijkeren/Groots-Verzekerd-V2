@@ -3,9 +3,6 @@ include 'includes/acf-content-blocks.php';
 include 'includes/post-types.php';
 include 'includes/taxonomies.php';
 
-// Disable admin bar
-show_admin_bar(false);
-
 // ACF options page
 add_action('init', function () {
     if (function_exists('acf_add_options_page')) {

@@ -6,6 +6,7 @@ jQuery.noConflict();
         menu();
         accordion();
         headerController();
+        megaMenus();
 
         if ($(window).width() > 991) {
             lenis();
@@ -21,6 +22,41 @@ jQuery.noConflict();
             });
         }
     });
+
+    let megaMenus = () => {
+        let menuTriggers = [];
+
+        for (let i = 1; i <= 10; i++) {
+            menuTriggers.push(`trigger-menu-${i}`);
+        }
+
+        menuTriggers.forEach(function (className) {
+            $(`.${className}`).addClass('has-mega-menu');
+        });
+
+        $('header, .mobile-nav').on('click', '.has-mega-menu', function (e) {
+            e.preventDefault();
+
+            let className = $(this).attr('class').split(/\s+/)[0];
+
+            if ($(this).hasClass('active')) {
+                closeAllMenus();
+            } else {
+                closeAllMenus();
+                $(this).addClass('active');
+                $('body').addClass('mega-menu-open');
+                $(`.mega-menu[data-trigger=${className}]`).addClass('active');
+            }
+        });
+
+        $('.mega-menu .overlay, .hamburger, .mega-menu .go-back').click(closeAllMenus);
+
+        function closeAllMenus() {
+            $('header li.has-mega-menu, .mobile-nav li').removeClass('active');
+            $('.mega-menu').removeClass('active');
+            $('body').removeClass('mega-menu-open');
+        }
+    };
 
     let headerController = function () {
         let scrollWrapper = $(window);

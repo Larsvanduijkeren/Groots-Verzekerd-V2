@@ -1,0 +1,272 @@
+.mega-menu {
+    position: fixed;
+    left: 0;
+    top: 150px;
+    width: 100%;
+    z-index: 500;
+    height: calc(100% - 150px);
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+    backdrop-filter: blur(5px);
+
+    .go-back {
+        display: none;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 0;
+        position: relative;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: $font-body;
+        margin-bottom: 20px;
+        cursor: pointer;
+        color: $text;
+
+        &:before {
+            @extend .icon-font;
+            content: '\e90a';
+            font-size: .8rem;
+            margin-right: 10px;
+            transition: transform .3s ease-in-out;
+            transform: scaleX(-1);
+        }
+    }
+
+    .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+        cursor: pointer;
+    }
+
+    .menu-wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);
+        border-radius: $radius-large;
+        top: 0;
+        z-index: 10;
+        background: $lighter-blue;
+        overflow: hidden;
+        font-weight: 50;
+        margin-top: 20px;
+        max-width: 2200px;
+
+        .content-wrapper {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow-x: auto;
+
+            li {
+                list-style: none;
+            }
+
+            > * {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                max-width: 25%;
+                min-width: 225px;
+                margin-right: 40px;
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .column.menu {
+                > .h4 {
+                    margin-bottom: 20px;
+                    display: block;
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover,
+                    &:focus {
+                        color: $orange;
+                    }
+                }
+
+                .column-menu .menu-item {
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+
+                    a {
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            color: $orange;
+                        }
+                    }
+
+                    img {
+                        margin-right: 15px;
+                        height: 40px;
+                    }
+
+                    p {
+                        font-size: .9rem;
+                    }
+
+                    .menu-item-info > *:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .column .card {
+                border-radius: $radius-large;
+                overflow: hidden;
+                background: $white;
+                padding: 20px;
+
+                .image {
+                    position: relative;
+                    display: block;
+                    border-radius: $radius-large;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+
+                    &:before {
+                        content: '';
+                        padding-top: 56.25%;
+                        display: block;
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-position: center;
+                        object-fit: cover;
+                    }
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .mega-menu {
+        top: 60px;
+        height: calc(100% - 60px);
+
+        .container {
+            padding: 20px 40px !important;
+        }
+
+        .go-back {
+            display: flex;
+        }
+
+        .menu-wrap {
+            height: 100%;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 0;
+            overflow-y: auto;
+            margin-top: 0;
+            background: $white;
+
+            .container {
+                padding-bottom: 20px !important;
+            }
+
+            .content-wrapper {
+                display: block;
+                margin: 0;
+
+                > * {
+                    width: 100%;
+                    max-width: 100%;
+                    flex-basis: 100%;
+                    margin: 0 0 20px 0;
+                    padding-right: 0;
+                    border-right: 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        border: none !important;
+                    }
+
+                    > * {
+
+                        max-width: 450px;
+                    }
+                }
+
+                .column.card + .column.card {
+                    margin-top: -10px;
+                }
+
+                .column.card .card {
+                    border-radius: $radius-mid;
+                    padding: 10px 20px;
+                    margin-bottom: 10px;
+
+                    &.white {
+                        background: $white;
+                    }
+
+                    .image {
+                        display: none;
+                    }
+
+                    .h4 {
+                        display: none;
+                    }
+
+                    p {
+                        display: none;
+                    }
+
+                    .btn-text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .mega-menu {
+        .container {
+            padding: 40px 20px !important;
+        }
+    }
+}
