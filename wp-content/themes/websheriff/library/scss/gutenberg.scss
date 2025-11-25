@@ -1,0 +1,78 @@
+// Global variables
+@import "modules/variables.scss";
+
+@font-face {
+    font-family: 'Iconfont';
+    src: url('../library/fonts/icomoon.eot'),
+        url('../library/fonts/icomoon.woff') format('woff'),
+        url('../library/fonts/icomoon.ttf') format('truetype'),
+        url('../library/fonts/icomoon.svg') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.block-editor-block-list__block:not(.wp-block-acf-hero):not(.wp-block-acf-simple-hero) + .block-editor-block-list__block {
+    .container {
+        padding-top: 0 !important;
+    }
+}
+
+.block-editor-block-list__block:not(.is-selected):not(.editor-post-title) {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: $font-body;
+    font-size: 16px;
+    color: $text;
+    letter-spacing: 1px;
+
+    // Lib
+    @import "lib/slick";
+    @import "lib/slick-theme";
+    @import "lib/aos";
+    @import "lib/lity";
+
+    // Reset and general styling
+    @import "partials/base.scss";
+    @import "partials/tools.scss";
+    @import "partials/typography.scss";
+    @import "partials/inputs.scss";
+    @import "partials/buttons.scss";
+    @import "partials/styling.scss";
+
+    // Component specific styling
+    @import "partials/components/header";
+    @import "partials/components/not-found";
+    @import "partials/components/footer";
+    @import "partials/components/mobile-nav";
+    @import "partials/components/blog";
+    @import "partials/components/single-post";
+
+    // Gutenberg
+    @import "partials/components/gutenberg/hero";
+
+
+    .card {
+        max-width: 100%;
+    }
+
+    .slider {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        > * {
+            display: none;
+        }
+    }
+
+    .highlight {
+        color: $text;
+        background: transparent;
+    }
+}
+
+.block-editor-block-list__block {
+    max-width: 100%;
+}

@@ -1,0 +1,102 @@
+section.hero + section.post-content {
+    margin-top: -40px;
+    .container {
+        padding-top: 0 !important;
+    }
+}
+
+section.post-content {
+    overflow: visible;
+
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: -20px;
+
+        > .content {
+            width: calc(66.666% - 40px);
+            max-width: calc(66.666% - 40px);
+            flex-basis: calc(66.666% - 40px);
+            margin: 20px;
+
+            .form-card {
+                background: $grey;
+                padding: 30px;
+                border-radius: $radius-mid;
+                margin-bottom: 40px;
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        > .sidebar {
+            width: calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            flex-basis: calc(33.333% - 40px);
+            margin: 20px;
+
+
+            .card {
+                margin-bottom: 20px;
+                background: $grey;
+                padding: 30px;
+                border-radius: $radius-mid;
+                font-size: .9rem;
+
+                &.blue {
+                    color: $white;
+                    background: $blue;
+
+                    a {
+                        color: $white;
+                    }
+
+                    p {
+                        color: #B6BDC4;
+                    }
+                }
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    section.post-content .flex-wrapper {
+        display: block;
+        margin: 0;
+
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .content,
+        .sidebar {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+            margin: 0 0 40px 0;
+
+            .card {
+                padding: 20px !important;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

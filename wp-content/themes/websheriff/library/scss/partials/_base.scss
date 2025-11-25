@@ -1,0 +1,62 @@
+html {
+    &.no-scroll {
+        position: fixed;
+        overflow-y: scroll;
+        width: 100%;
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: $font-body;
+    font-size: 16px;
+    color: $text;
+    background: $white;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: $text;
+}
+
+ol {
+    margin-bottom: $gutter-small;
+}
+
+ul,
+ol {
+    margin: 0 0 $gutter-small 0;
+    padding: 0;
+
+    li {
+        margin: 0 0 0 20px;
+        padding: 0;
+    }
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+ol {
+    margin-left: 10px;
+}
+
+p {
+    margin: 0 0 $gutter-small 0;
+    color: $text-light;
+    font-weight: 300;
+}
