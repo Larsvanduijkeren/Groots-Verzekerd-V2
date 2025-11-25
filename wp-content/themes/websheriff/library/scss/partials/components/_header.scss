@@ -20,17 +20,22 @@
     }
 }
 
+.scrolled header.header {
+    background: $white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
 
 header.header {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    background: $white;
     height: 150px;
     z-index: 150;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 
     .container {
         padding-top: 0 !important;
@@ -141,8 +146,8 @@ header.header {
                     margin-right: 0;
 
                     .btn {
-                        margin-right: 0 ;
-                        margin-left: 5px ;
+                        margin-right: 0;
+                        margin-left: 5px;
                     }
                 }
 
@@ -387,7 +392,6 @@ header.header {
         }
     }
 }
-
 
 @media only screen and (min-width: 1200px) {
     #wpadminbar {

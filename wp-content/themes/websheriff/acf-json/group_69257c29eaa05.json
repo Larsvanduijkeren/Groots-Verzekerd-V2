@@ -675,6 +675,45 @@
                     "parent_repeater": "field_6925a236b9af5"
                 }
             ]
+        },
+        {
+            "key": "field_6925a733b9e3b",
+            "label": "Ratings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6925a737b9e3c",
+            "label": "Rating text",
+            "name": "rating_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -696,5 +735,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764074315
+    "modified": 1764075334
 }

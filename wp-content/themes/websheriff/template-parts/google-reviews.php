@@ -9,6 +9,6 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <h2>google-reviews</h2>
+        <h2 data-aos="fade-up">google-reviews</h2>
     </div>
 </section>

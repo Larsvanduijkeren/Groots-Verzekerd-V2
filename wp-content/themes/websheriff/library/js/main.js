@@ -7,6 +7,7 @@ jQuery.noConflict();
         accordion();
         headerController();
         megaMenus();
+        reviewSlider();
 
         if ($(window).width() > 991) {
             lenis();
@@ -22,6 +23,21 @@ jQuery.noConflict();
             });
         }
     });
+
+    const reviewSlider = () => {
+        let slider = $("section.review-slider .card");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                infinite: false,
+                dots: true,
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+            });
+        }
+    }
 
     let megaMenus = () => {
         let menuTriggers = [];

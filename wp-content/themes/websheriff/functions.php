@@ -25,6 +25,14 @@ function remove_extra_image_sizes()
 
 add_action('init', 'remove_extra_image_sizes');
 
+function get_reading_time($post_id = null) {
+    $post_id = $post_id ?: get_the_ID();
+    $content = get_post_field('post_content', $post_id);
+    $word_count = str_word_count(strip_tags($content));
+    $minutes = ceil($word_count / 200); // Round up
+    return $minutes;
+}
+
 add_filter('the_content', 'disable_specific_shortcodes_in_gutenberg', 1);
 
 function disable_specific_shortcodes_in_gutenberg($content)

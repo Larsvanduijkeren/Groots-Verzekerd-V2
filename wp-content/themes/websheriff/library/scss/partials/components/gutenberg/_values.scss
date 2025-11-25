@@ -1,3 +1,36 @@
-section.hero {
+section.values {
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: -20px;
 
+        > * {
+            width: calc(25% - 40px);
+            max-width: calc(25% - 40px);
+            flex-basis: calc(25% - 40px);
+            margin: 20px;
+            background: $blue;
+            color: $white;
+            border-radius: $radius-mid;
+            text-align: center;
+            padding: 40px;
+
+            svg * {
+                fill: $orange;
+            }
+
+            svg,
+            img {
+                height: 50px;
+                display: block;
+                margin: 0 auto 20px auto;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

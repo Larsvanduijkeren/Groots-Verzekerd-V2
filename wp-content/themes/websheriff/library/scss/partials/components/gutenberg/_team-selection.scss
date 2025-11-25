@@ -1,3 +1,60 @@
-section.hero {
+section.team-selection {
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: -20px;
 
+        > * {
+            width: calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            flex-basis: calc(33.333% - 40px);
+            margin: 20px;
+            background: $white;
+            border-radius: $radius-mid;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .image {
+                display: block;
+                margin-bottom: 20px;
+                width: 100%;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+
+            h3 {
+                margin-bottom: 5px;
+            }
+
+            span.role {
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+                display: block;
+                color: $text-light;
+            }
+
+            .contact-info {
+                margin-top: auto;
+            }
+
+            a {
+                color: $orange;
+                display: block;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
 .container {
-    max-width: 1400px;
+    max-width: 1500px;
     padding: 120px 40px;
     margin: 0 auto;
     position: relative;
@@ -14,6 +14,66 @@
     visibility: hidden;
 }
 
+
+.slick-dotted {
+    padding-bottom: 40px;
+    margin: 0 !important;
+}
+
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 0 !important;
+    transform: translateX(-50%);
+    text-align: center;
+
+    li {
+        width: 12px !important;
+        height: 12px !important;
+        position: relative;
+        background: $blue;
+        opacity: .3;
+        border-radius: 100%;
+        margin: 0 4px;
+        transition: all 0.3s ease-in-out;
+
+        &:before,
+        &:after {
+            content: none !important;
+        }
+
+        &:hover,
+        &:focus,
+        &.slick-active {
+            background: $blue;
+            opacity: 1;
+        }
+
+        button {
+            display: none;
+
+            &:before,
+            &:after {
+                content: none !important;
+            }
+        }
+    }
+}
+
+.rating-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    &:before {
+        @extend .icon-font;
+        content: '\e915';
+        margin-right: 10px;
+        color: #ebc022;
+        font-size: 20px;
+    }
+}
 
 .slick-arrow {
     width: 40px !important;
@@ -89,11 +149,15 @@
     &.center {
         text-align: center;
         margin: 0 auto 40px auto;
+
+        .rating-text {
+            justify-content: center;
+        }
     }
 }
 
 .page-content {
-    padding-top: 130px;
+    padding-top: 150px;
 }
 
 .social a {
@@ -143,89 +207,6 @@
 
 button.lity-close:after {
     content: none !important;
-}
-
-.slick-dots {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-
-    li {
-        width: 15px;
-        height: 6px;
-        position: relative;
-        background: $white;
-        opacity: .3;
-        border-radius: 5px;
-        margin: 0 2px;
-        transition: all 0.3s ease-in-out;
-
-        &:before {
-            content: none;
-        }
-
-        &:hover,
-        &:focus,
-        &.slick-active {
-            background: $white;
-            opacity: 1;
-        }
-
-        &.slick-active {
-            width: 60px;
-        }
-
-        button {
-            display: none;
-        }
-    }
-}
-
-
-.slick-dotted {
-    padding-bottom: 40px;
-    margin: 0 !important;
-}
-
-.slick-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 0 !important;
-    transform: translateX(-50%);
-    text-align: center;
-
-    li {
-        width: 8px !important;
-        height: 8px !important;
-        position: relative;
-        background: $text;
-        opacity: .3;
-        border-radius: 100%;
-        margin: 0 4px;
-        transition: all 0.3s ease-in-out;
-
-        &:before,
-        &:after {
-            content: none !important;
-        }
-
-        &:hover,
-        &:focus,
-        &.slick-active {
-            background: $text;
-            opacity: 1;
-        }
-
-        button {
-            display: none;
-
-            &:before,
-            &:after {
-                content: none !important;
-            }
-        }
-    }
 }
 
 .pagination {

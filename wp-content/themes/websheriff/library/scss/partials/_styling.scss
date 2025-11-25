@@ -13,7 +13,7 @@ section {
 
         &:before {
             @extend .icon-font;
-            content: '\e915';
+            content: '\e911';
             margin-right: 10px;
             font-size: 1.2rem;
             margin-top: 3px;
@@ -22,10 +22,10 @@ section {
     }
 }
 
-section:not(.blue) {
+section:not(.blue):not(.light-blue) {
     overflow: hidden;
 
-    + section:not(.blue) .container {
+    + section:not(.blue):not(.light-blue) .container {
         padding-top: 0 !important;
     }
 }
@@ -39,11 +39,16 @@ section.blue {
         color: $white;
     }
 
-    p {
-        color: #B6BDC4;
-    }
-
     + section.blue .container {
+        padding-top: 0 !important;
+    }
+}
+
+section.light-blue {
+    overflow: hidden;
+    background: $light-blue;
+
+    + section.light-blue .container {
         padding-top: 0 !important;
     }
 }
