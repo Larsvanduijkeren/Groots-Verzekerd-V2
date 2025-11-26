@@ -1,9 +1,9 @@
 {
-    "key": "group_69258fa0da9bf",
-    "title": "Block: Home Hero",
+    "key": "group_6926c5c2abc10",
+    "title": "Block: Emergency Contacts",
     "fields": [
         {
-            "key": "field_69258fa0dc38a",
+            "key": "field_6926c5c2afcbc",
             "label": "Content",
             "name": "",
             "aria-label": "",
@@ -21,7 +21,7 @@
             "selected": 0
         },
         {
-            "key": "field_6925a64dd8138",
+            "key": "field_6926c5c2afd2a",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -42,7 +42,7 @@
             "append": ""
         },
         {
-            "key": "field_6925a650d8139",
+            "key": "field_6926c5c2afd96",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -63,9 +63,9 @@
             "delay": 0
         },
         {
-            "key": "field_6925a654d813a",
-            "label": "Buttons",
-            "name": "buttons",
+            "key": "field_6926c5c2afe32",
+            "label": "Cards",
+            "name": "cards",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -85,11 +85,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6925a65cd813b",
-                    "label": "Button",
-                    "name": "button",
+                    "key": "field_6926c5c2bcbe6",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -98,79 +98,37 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "parent_repeater": "field_6925a654d813a"
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6926c5c2afe32"
+                },
+                {
+                    "key": "field_6926c5c2bcc4e",
+                    "label": "Phone",
+                    "name": "phone",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6926c5c2afe32"
                 }
             ]
-        },
-        {
-            "key": "field_6925a661d813c",
-            "label": "Meta",
-            "name": "meta",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6925a669d813d",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_6925a70b55c10",
-            "label": "Image label",
-            "name": "image_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -178,7 +136,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/home-hero"
+                "value": "acf\/emergency-contacts"
             }
         ]
     ],
@@ -192,5 +150,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764075279
+    "modified": 1764148794
 }

@@ -1,1 +1,28 @@
+section.emergency-contacts {
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: -20px;
 
+        > * {
+            width: calc(25% - 40px);
+            max-width: calc(25% - 40px);
+            flex-basis: calc(25% - 40px);
+            margin: 20px;
+            background: $white;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: $radius-mid;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 40px;
+
+            a {
+                color: $orange;
+                font-size: 1.32rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

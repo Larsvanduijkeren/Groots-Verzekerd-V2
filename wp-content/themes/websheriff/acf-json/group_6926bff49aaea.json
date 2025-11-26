@@ -1,13 +1,13 @@
 {
-    "key": "group_692579a9df3a4",
-    "title": "Blocks",
+    "key": "group_6926bff49aaea",
+    "title": "PT: Insurance",
     "fields": [
         {
-            "key": "field_692579b78e56a",
-            "label": "Settings",
-            "name": "",
+            "key": "field_6926bff5fc0b5",
+            "label": "Short description",
+            "name": "short_description",
             "aria-label": "",
-            "type": "tab",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,17 +16,20 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_692579a98e569",
-            "label": "Id",
-            "name": "id",
+            "key": "field_6926c13cd9b1d",
+            "label": "CTA label",
+            "name": "cta_label",
             "aria-label": "",
             "type": "text",
-            "instructions": "Used for anchor links",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -45,9 +48,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "insurance"
             }
         ]
     ],
@@ -61,5 +64,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764063678
+    "modified": 1764147545
 }
