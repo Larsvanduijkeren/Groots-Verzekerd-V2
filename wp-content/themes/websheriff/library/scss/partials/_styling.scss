@@ -35,6 +35,11 @@ section.blue {
     background: $blue;
     color: $white;
 
+    .btn-ghost {
+        color: $white !important;
+        border-color: $white;
+    }
+
     a {
         color: $white;
     }

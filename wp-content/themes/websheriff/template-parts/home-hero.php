@@ -30,7 +30,7 @@ $id = get_field('id');
                 <?php if (empty($buttons) === false) :
                     $class = 'btn';
                     ?>
-                    <div class="header-buttons">
+                    <div class="buttons">
                         <?php foreach ($buttons as $key => $button) :
                             if ($key === 1) {
                                 $class = 'btn-ghost';
