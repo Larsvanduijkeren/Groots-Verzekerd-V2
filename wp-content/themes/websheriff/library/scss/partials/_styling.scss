@@ -30,10 +30,23 @@ section:not(.blue):not(.light-blue) {
     }
 }
 
+main section:last-child:not(.blue):not(.light-blue) .container {
+    padding-bottom: 0 !important;
+}
+
 section.blue {
     overflow: hidden;
     background: $blue;
     color: $white;
+
+    .btn {
+        &:hover,
+        &:focus {
+            background: $orange !important;
+            border-color: $orange !important;
+            color: $white !important;
+        }
+    }
 
     .btn-ghost {
         color: $white !important;

@@ -41,8 +41,9 @@ input[type=submit] {
 
     &:hover,
     &:focus {
-        background: $light-blue !important;
-        border-color: $light-blue !important;
+        background: $blue !important;
+        border-color: $blue !important;
+        color: $white !important;
     }
 
     &.small {
@@ -69,6 +70,13 @@ input[type=submit] {
     box-shadow: none;
     border: 1px solid $text;
     transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background: $orange !important;
+        color: $white !important;
+        border-color: $orange !important;
+    }
 
     &.link {
         &:before {

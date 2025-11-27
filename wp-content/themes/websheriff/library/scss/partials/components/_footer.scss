@@ -1,5 +1,14 @@
 footer.footer {
-    border-top: 1px solid $text;
+    .container {
+        padding-top: 0 !important;
+        padding-bottom: 40px !important;
+    }
+
+    .card {
+        padding: 80px 80px 40px 80px;
+        background: $light-blue;
+        border-radius: $radius-large;
+    }
 
     .to-top {
         display: inline-flex;
@@ -83,6 +92,12 @@ footer.footer {
 
                     a {
                         font-weight: 400;
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            color: $orange;
+                        }
                     }
                 }
             }

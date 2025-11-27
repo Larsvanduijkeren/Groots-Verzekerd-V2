@@ -25,6 +25,10 @@ section.hero {
             flex-wrap: wrap;
             margin: -40px;
 
+            .content {
+                font-size: 1.1rem;
+            }
+
             > * {
                 width: calc(50% - 80px);
                 max-width: calc(50% - 80px);

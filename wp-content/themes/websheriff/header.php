@@ -207,7 +207,7 @@ $short_rating_text = get_field('short_rating_text', 'option');
                                                     } ?>
 
                                                     <?php if (empty($column['card_link']) === false) {
-                                                        echo sprintf('<a href="%s" target="%s" class="btn-text">%s</a>', $column['card_link']['url'], $column['card_link']['target'], $column['card_link']['title']);
+                                                        echo sprintf('<a href="%s" target="%s" class="btn">%s</a>', $column['card_link']['url'], $column['card_link']['target'], $column['card_link']['title']);
                                                     } ?>
                                                 <?php endif; ?>
                                             </div>
