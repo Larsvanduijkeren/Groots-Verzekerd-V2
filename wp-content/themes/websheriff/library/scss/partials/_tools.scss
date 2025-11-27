@@ -14,7 +14,6 @@
     visibility: hidden;
 }
 
-
 .slick-dotted {
     padding-bottom: 40px;
     margin: 0 !important;
@@ -157,7 +156,29 @@
 }
 
 .page-content {
-    padding-top: 150px;
+    padding-top: 190px;
+
+    section:first-child {
+        .container {
+            padding-top: 40px !important;
+        }
+
+        &.hero,
+        &.home-hero,
+        &.form:not(.card) {
+            margin-top: -190px;
+            padding-top: 190px;
+        }
+    }
+}
+
+.text-label {
+    display: block;
+    margin-bottom: 20px;
+    color: $orange;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.1;
 }
 
 .social a {
@@ -184,10 +205,6 @@
         color: $white;
     }
 
-    &.twitter:before {
-        content: '\e90c';
-    }
-
     &.linkedin:before {
         content: '\e908';
     }
@@ -199,14 +216,54 @@
     &.facebook::before {
         content: '\e900';
     }
-
-    &.youtube::before {
-        content: '\e902';
-    }
 }
 
 button.lity-close:after {
     content: none !important;
+}
+
+
+.categories {
+    margin-bottom: $gutter;
+
+    ul {
+        margin: -5px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        li {
+            list-style: none;
+            margin: 5px !important;
+            white-space: nowrap;
+            padding-left: 0;
+
+            .btn {
+                border-radius: 100px;
+                transition: opacity 0.3s ease-in-out;
+                opacity: .5;
+
+                &:hover,
+                &:focus {
+                    opacity: 1 !important;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: none;
+            }
+
+            &:before {
+                content: none;
+            }
+        }
+    }
 }
 
 .pagination {
@@ -235,7 +292,7 @@ button.lity-close:after {
         &:hover,
         &:focus,
         &.current {
-            background: $light-blue;
+            background: $orange;
         }
     }
 }

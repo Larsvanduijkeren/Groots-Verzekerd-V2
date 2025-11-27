@@ -8,6 +8,10 @@ jQuery.noConflict();
         headerController();
         megaMenus();
         reviewSlider();
+        accordion();
+        postIndex();
+        headerUsps();
+        scrollToTop();
 
         if ($(window).width() > 991) {
             lenis();
@@ -23,6 +27,78 @@ jQuery.noConflict();
             });
         }
     });
+
+    let scrollToTop = () => {
+        $('.to-top').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 600);
+        });
+    }
+
+    let headerUsps = () => {
+        let slider = $(".top-bar .usps");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                autoplay: true,
+                dots: false,
+                arrows: false,
+                variableWidth: false,
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 1300,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        }
+    };
+
+    let postIndex = () => {
+        let indexItem = $(".post-content .content h2");
+        let didScroll = false;
+
+        indexItem.each(function (index) {
+            let title = $(this).text();
+
+            let slug = "item-" + index;
+
+            $(this).attr("id", slug);
+
+            $(".post-content .index").append("<a data-ref=\"" + slug + "\" href=\"#" + slug + "\">" + title + "</a>");
+        });
+    };
+
+    const accordion = () => {
+        let list = $(".accordion");
+
+        if (list) {
+            list.accordion({
+                collapsible: true,
+                active: false,
+                header: "h4",
+                heightStyle: "content",
+            });
+        }
+
+        $(".accordion .question").click(function () {
+            if ($(this).find(".ui-accordion-header").hasClass("ui-state-active")) {
+                $(".accordion .question").removeClass("open");
+                $(this).addClass("open");
+            } else {
+                $(".accordion .question").removeClass("open");
+            }
+        });
+    };
 
     const reviewSlider = () => {
         let slider = $("section.review-slider .card");
@@ -87,28 +163,6 @@ jQuery.noConflict();
                 body.addClass("scrolled");
             } else {
                 body.removeClass("scrolled");
-            }
-        });
-    };
-
-    let accordion = () => {
-        let list = $(".accordion");
-
-        if (list) {
-            list.accordion({
-                collapsible: true,
-                active: false,
-                header: "h4",
-                heightStyle: "content",
-            });
-        }
-
-        $(".accordion .question").click(function () {
-            if ($(this).find(".ui-accordion-header").hasClass("ui-state-active")) {
-                $(".accordion .question").removeClass("open");
-                $(this).addClass("open");
-            } else {
-                $(".accordion .question").removeClass("open");
             }
         });
     };

@@ -1,6 +1,27 @@
 footer.footer {
     border-top: 1px solid $text;
 
+    .to-top {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: $orange;
+        }
+
+        &:before {
+            @extend .icon-font;
+            content: '\e910';
+            transform: rotate(-90deg);
+            font-size: .7rem;
+            margin-right: 10px;
+        }
+    }
+
     .flex-wrapper {
         display: flex;
         align-items: flex-start;

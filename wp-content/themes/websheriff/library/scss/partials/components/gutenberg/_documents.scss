@@ -1,1 +1,43 @@
+section.documents {
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: -20px;
 
+        > * {
+            width: calc(50% - 40px);
+            max-width: calc(50% - 40px);
+            flex-basis: calc(50% - 40px);
+            margin: 20px;
+            background: $white;
+            border-radius: $radius-mid;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 40px;
+            background: $light-blue;
+
+            .btn,
+            .btn-ghost {
+                display: block;
+                width: 100%;
+            }
+
+            svg * {
+                fill: $orange;
+            }
+
+            svg,
+            img {
+                height: 50px;
+                display: block;
+                margin: 0 auto 20px auto;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

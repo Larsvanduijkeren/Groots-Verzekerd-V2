@@ -9,6 +9,10 @@ $footer_contact_information = get_field('footer_contact_information', 'option');
 $disclaimer = get_field('disclaimer', 'option');
 $phone = get_field('phone', 'option');
 $email = get_field('email', 'option');
+
+$facebook = get_field('facebook', 'option');
+$linkedin = get_field('linkedin', 'option');
+$instagram = get_field('instagram', 'option');
 ?>
 
 <footer class='footer'>
@@ -60,8 +64,24 @@ $email = get_field('email', 'option');
                 &copy; <?php echo date('Y'); ?> Groots Verzekerd
             </span>
 
-            <div class="social">
-                Social
+            <div class='social'>
+                <?php if (empty($instagram) === false) : ?>
+                    <a href='<?php echo $instagram; ?>' target='_blank' class='icon large instagram'>
+                        Instagram
+                    </a>
+                <?php endif; ?>
+
+                <?php if (empty($facebook) === false) : ?>
+                    <a href='<?php echo $facebook; ?>' target='_blank' class='icon large facebook'>
+                        Facebook
+                    </a>
+                <?php endif; ?>
+
+                <?php if (empty($linkedin) === false) : ?>
+                    <a href='<?php echo $linkedin; ?>' target='_blank' class='icon large linkedin'>
+                        Linkedin
+                    </a>
+                <?php endif; ?>
             </div>
 
             <span class="to-top">

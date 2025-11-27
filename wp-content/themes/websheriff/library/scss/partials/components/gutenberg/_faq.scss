@@ -1,1 +1,80 @@
+section.faq {
+    .question {
+        transition: all 0.3s ease-in-out;
+        max-width: 700px;
+        margin: 0 auto 10px auto;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            margin-bottom: 0;
+            cursor: pointer;
+            position: relative;
+            padding: $gutter-small 60px $gutter-small $gutter-small;
+            font-weight: 400;
+            line-height: 1.4;
+            transition: color 0.3s ease-in-out;
+            font-size: 1rem;
+            background: $lighter-blue;
+            border-radius: $radius-mid;
+            text-transform: none;
+
+            &:after {
+                @extend .icon-font;
+                content: '\e904';
+                position: absolute;
+                right: 20px;
+                font-size: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $text;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &.ui-state-active {
+                &:after {
+                    transform: translateY(-50%) scaleY(-1);
+                }
+            }
+        }
+
+        .answer {
+            padding: $gutter-small;
+            color: $text;
+            transition: none;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    section.faq .flex-wrapper {
+        display: block;
+        margin: 0;
+
+        > * {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+            margin: 0 0 20px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
 

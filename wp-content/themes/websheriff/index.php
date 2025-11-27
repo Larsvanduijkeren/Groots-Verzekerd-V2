@@ -2,32 +2,34 @@
 
 get_header();
 
-global $wp_query;
+$blog_title = get_field('blog_title', 'option');;
+$blog_text = get_field('blog_text', 'option');;
 
-$blog_title = get_field('blog_title', 'option');
-$blog_text = get_field('blog_text', 'option');
-$blog_card_text = get_field('blog_card_text', 'option');
+global $wp_query;
 
 // Blog page
 if (isset($wp_query) && (bool)$wp_query->is_posts_page) :
     $id = get_option('page_for_posts');
+    $label = get_field('blog_label', 'option');
+    $title = get_field('blog_title', 'option');
+    $text = get_field('blog_text', 'option');
 
     $args = [
         'post_type'      => 'post',
         'post_status'    => 'publish',
         'orderby'        => 'post_date',
         'order'          => 'desc',
-        'posts_per_page' => 12,
+        'posts_per_page' => 9,
         'paged'          => get_query_var('paged'),
     ];
 
     $query = new WP_Query($args);
     ?>
 
-    <section class="simple-hero blue">
+    <section class="hero light-blue center">
         <div class="container">
             <div class="flex-wrapper">
-                <div class="content" data-aos="fade-up">
+                <div class="content">
                     <?php if (empty($blog_title) === false) : ?>
                         <h1><?php echo $blog_title; ?></h1>
                     <?php endif; ?>
@@ -35,46 +37,45 @@ if (isset($wp_query) && (bool)$wp_query->is_posts_page) :
                     <?php if (empty($blog_text) === false) {
                         echo $blog_text;
                     } ?>
-
-
-                    <div class="categories">
-                        <a
-                            href='<?php echo get_permalink(get_option('page_for_posts')) ?>'
-                            class='btn white'
-                        >
-                            Alles
-                        </a>
-
-                        <?php
-                        $cat_args = [
-                            'exclude'    => [1],
-                            'option_all' => 'All',
-                            'type'       => 'category',
-                        ];
-
-                        $categories = get_categories($cat_args);
-
-                        foreach ($categories as $cat) : ?>
-                            <a
-                                class="btn-ghost white"
-                                data-category='<?php echo $cat->term_id ?>'
-                                href='<?php echo get_category_link($cat->term_id); ?>'><?php echo $cat->name ?>
-                            </a>
-                        <?php endforeach; ?>
-                    </div>
                 </div>
-
-                <?php if (empty($blog_card_text) === false) : ?>
-                    <div class="card" data-aos="fade-up">
-                        <?php echo $blog_card_text; ?>
-                    </div>
-                <?php endif; ?>
             </div>
         </div>
     </section>
 
     <section class='blog-archive'>
         <div class='container'>
+            <div class='categories' data-aos="fade-up">
+                <ul>
+                    <li>
+                        <a
+                            href='<?php echo home_url('/nieuws') ?>'
+                            class='btn small active'
+                        >
+                            Bekijk alles
+                        </a>
+                    </li>
+
+                    <?php
+                    $cat_args = [
+                        'exclude'    => [1],
+                        'option_all' => 'All',
+                        'type'       => 'category',
+                    ];
+
+                    $categories = get_categories($cat_args);
+
+                    foreach ($categories as $cat) : ?>
+                        <li>
+                            <a
+                                class="btn small"
+                                data-category='<?php echo $cat->term_id ?>'
+                                href='<?php echo get_category_link($cat->term_id); ?>'><?php echo $cat->name ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
             <div class='post-grid'>
                 <?php
 
@@ -82,14 +83,14 @@ if (isset($wp_query) && (bool)$wp_query->is_posts_page) :
                     while ($query->have_posts()) :
                         $query->the_post();
                         $id = get_the_id();
-                        $featured_image = get_the_post_thumbnail_url($id, 'large');
-                        $thumbnail_id = get_post_thumbnail_id($id);
+                        $featured_image = get_the_post_thumbnail_url($post, 'large');
+                        $thumbnail_id = get_post_thumbnail_id($post);
                         $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-                        $author_id = get_post_field('post_author', $id);
+                        $author_id = $post->post_author;
                         $cat = get_the_terms($id, 'category');
                         ?>
 
-                        <a data-aos="fade-up" href="<?php echo get_the_permalink($id); ?>" class="single-post">
+                        <div data-aos="fade-up" class="single-post">
                             <?php if (empty($featured_image) === false) : ?>
                                 <span class="image">
                                     <img src="<?php echo $featured_image; ?>"
@@ -98,29 +99,23 @@ if (isset($wp_query) && (bool)$wp_query->is_posts_page) :
                             <?php endif; ?>
 
                             <div class="content">
+                                <?php if (empty($cat) === false) : ?>
+                                    <span class="btn small">
+                                        <?php echo $cat[0]->name; ?>
+                                    </span>
+                                <?php endif; ?>
+
                                 <h3><?php echo get_the_title($id); ?></h3>
 
-                                <?php the_excerpt(); ?>
+                                <div class="time-to-read"><?php echo get_reading_time($post); ?> minuten leestijd</div>
 
-                                <span class="author">
-                                    <?php echo get_avatar($author_id, 60); ?>
+                                <p><?php echo get_the_excerpt(); ?></p>
 
-                                    <?php echo get_the_author_meta('display_name', $author_id); ?>
-                                </span>
-
-                                <div class="wrap">
-                                    <span class="btn blue">Lees verder</span>
-
-                                    <?php if (empty($cat) === false) : ?>
-                                        <span class="cat btn beige small">
-                                            <?php echo $cat[0]->name; ?>
-                                        </span>
-                                    <?php endif; ?>
-                                </div>
+                                <a href="<?php echo get_the_permalink($id); ?>" class="btn-ghost">Lees verder</a>
                             </div>
-                        </a>
-
-                    <?php endwhile; ?>
+                        </div>
+                    <?php
+                    endwhile; ?>
                     <div class="pagination" data-aos="fade-up">
                         <?php
                         echo paginate_links([
@@ -146,12 +141,7 @@ if (isset($wp_query) && (bool)$wp_query->is_posts_page) :
         </div>
     </section>
 
-    <?php
-
-    $post = get_post(get_option('page_for_posts'));
-    $content = apply_filters('the_content', $post->post_content);
-    echo $content;
-
+<?php
 // Normal page
 else :
     if (have_posts()) : while (have_posts()) : the_post();

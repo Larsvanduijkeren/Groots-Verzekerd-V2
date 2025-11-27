@@ -4,13 +4,13 @@ $label = get_field('label');
 $title = get_field('title');
 $text = get_field('text');
 $buttons = get_field('buttons');
-$image = get_field('image');
+$cards = get_field('cards');
 
 $id = get_field('id');
 ?>
 
 <section
-    class="text-image <?php echo $order; ?>"
+    class="text-cards <?php echo $order; ?>"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
@@ -47,10 +47,23 @@ $id = get_field('id');
                 <?php endif; ?>
             </div>
 
-            <?php if (empty($image) === false) : ?>
-                <span class="image" data-aos="fade-up">
-                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
-                </span>
+            <?php if (empty($cards) === false) : ?>
+                <div class="cards" data-aos="fade-up">
+                    <div class="cards-wrapper">
+                        <?php foreach ($cards as $card) : ?>
+                            <div class="card">
+                                <?php if (empty($card['icon']) === false) : ?>
+                                    <img class="style-svg" src="<?php echo $card['icon']['sizes']['medium']; ?>"
+                                         alt="<?php echo $card['icon']['alt']; ?>">
+                                <?php endif; ?>
+
+                                <?php if (empty($card['text']) === false) {
+                                    echo $card['text'];
+                                } ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
             <?php endif; ?>
         </div>
     </div>

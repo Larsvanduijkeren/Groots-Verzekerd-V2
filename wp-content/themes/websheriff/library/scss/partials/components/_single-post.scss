@@ -1,68 +1,160 @@
-section.hero + section.post-content {
-    margin-top: -40px;
-    .container {
-        padding-top: 0 !important;
-    }
+.single-post .page-content {
+    overflow: visible !important;
 }
 
-section.post-content {
-    overflow: visible;
+.post-content {
+    overflow: visible !important;
 
-    .flex-wrapper {
+    img {
+        display: block;
+        margin-bottom: 20px;
+        border-radius: $radius-small;
+    }
+
+    .post-wrapper {
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
-        flex-wrap: wrap;
-        margin: -20px;
+        margin: 0 -40px;
 
-        > .content {
-            width: calc(66.666% - 40px);
-            max-width: calc(66.666% - 40px);
-            flex-basis: calc(66.666% - 40px);
-            margin: 20px;
+        > .sidebar {
+            width: calc(33.333% - 80px);
+            max-width: calc(33.333% - 80px);
+            flex-basis: calc(33.333% - 80px);
+            margin: 0 40px;
 
-            .form-card {
-                background: $lighter-blue;
-                padding: 30px;
-                border-radius: $radius-mid;
-                margin-bottom: 40px;
+            .wpforms-container {
+                margin-bottom: 0 !important;
+            }
+
+            .group {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
 
                 > *:last-child {
                     margin-bottom: 0;
                 }
             }
+
+            .sticky {
+                position: sticky;
+                top: 200px;
+
+                button[type=submit] {
+                    width: 100%;
+                }
+
+                .author {
+                    background: $lighter-blue;
+                    padding: 10px 20px;
+                    border-radius: $radius-small;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        margin: 0 10px 0 0;
+                        display: block;
+                        object-fit: cover;
+                    }
+                }
+
+                .social {
+                    a {
+                        margin: 0 5px 5px 0 !important;
+                    }
+                }
+            }
+
+            .index {
+                margin-bottom: $gutter-small !important;
+
+                a {
+                    position: relative;
+                    display: block;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    transition: color 0.3s ease-in-out;
+                    margin-bottom: 10px;
+                    border-radius: $radius-small;
+                    padding-left: 20px;
+                    color: $text;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                        width: 10px;
+                        height: 10px;
+                        background: $orange;
+                        border-radius: 100%;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .info {
+                font-size: .8rem;
+
+                .date {
+                    text-transform: capitalize;
+                }
+
+                .time {
+                    position: relative;
+                    padding-left: 10px;
+                    margin-left: 5px;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 3px;
+                        height: 3px;
+                        background: red;
+                        border-radius: 100%;
+                    }
+                }
+            }
         }
 
-        > .sidebar {
-            width: calc(33.333% - 40px);
-            max-width: calc(33.333% - 40px);
-            flex-basis: calc(33.333% - 40px);
-            margin: 20px;
+        > .content {
+            width: calc(66.666% - 80px);
+            max-width: calc(66.666% - 80px);
+            flex-basis: calc(66.666% - 80px);
+            margin: 0 40px;
 
+            a {
+                color: $orange;
+            }
+        }
+    }
+}
 
-            .card {
-                margin-bottom: 20px;
-                background: $lighter-blue;
-                padding: 30px;
-                border-radius: $radius-mid;
-                font-size: .9rem;
+@media only screen and (max-width: 991px) {
+    section.single-hero {
+        padding-top: 0;
+        margin-bottom: 0 !important;
 
-                &.blue {
-                    color: $white;
-                    background: $blue;
+        .flex-wrapper {
+            display: block;
+            margin: 0;
 
-                    a {
-                        color: $white;
-                    }
-
-                    p {
-                        color: #B6BDC4;
-                    }
-                }
-
-                > *:last-child {
-                    margin-bottom: 0;
-                }
+            > * {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 20px 0;
 
                 &:last-child {
                     margin-bottom: 0;
@@ -70,32 +162,26 @@ section.post-content {
             }
         }
     }
-}
 
-@media only screen and (max-width: 991px) {
+    section.post-hero .container {
+        padding-bottom: 0 !important;
+    }
 
-    section.post-content .flex-wrapper {
-        display: block;
-        margin: 0;
+    section.post-content {
+        .post-wrapper {
+            display: block;
+            margin: 0;
 
-        .container {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
+            > .sidebar,
+            > .content {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 20px 0;
 
-        .content,
-        .sidebar {
-            width: 100%;
-            max-width: 100%;
-            flex-basis: 100%;
-            margin: 0 0 40px 0;
-
-            .card {
-                padding: 20px !important;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }

@@ -1,9 +1,30 @@
 {
-    "key": "group_6926bff49aaea",
-    "title": "PT: Insurance",
+    "key": "group_6928187d74abe",
+    "title": "PT: Vacancy",
     "fields": [
         {
-            "key": "field_6926bff5fc0b5",
+            "key": "field_692818ec25cd3",
+            "label": "Position filled",
+            "name": "position_filled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6928187deafd8",
             "label": "Short description",
             "name": "short_description",
             "aria-label": "",
@@ -22,27 +43,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_6926c13cd9b1d",
-            "label": "CTA label",
-            "name": "cta_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -50,7 +50,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "insurance"
+                "value": "vacancy"
             }
         ]
     ],
@@ -64,5 +64,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764147545
+    "modified": 1764235512
 }

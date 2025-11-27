@@ -1,9 +1,20 @@
 section.hero {
-    margin-top: -150px;
-    padding-top: 150px;
+    &.center {
+        .content {
+            margin: 0 auto;
+            text-align: center;
+            max-width: 700px;
+            font-size: 1.1rem;
 
-    .container {
-        padding-top: 40px !important;
+            h1,
+            h2 {
+                font-weight: 700;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &.left {

@@ -1,1 +1,47 @@
+section.text-image {
+    &.media-first .flex-wrapper {
+        flex-direction: row-reverse;
+    }
 
+    .flex-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: -40px;
+
+        > * {
+            width: calc(50% - 80px);
+            max-width: calc(50% - 80px);
+            flex-basis: calc(50% - 80px);
+            margin: 40px;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .image {
+            display: block;
+            border-radius: $radius-large;
+            overflow: hidden;
+            position: relative;
+
+            &:before {
+                content: '';
+                padding-top: 65%;
+                display: block;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

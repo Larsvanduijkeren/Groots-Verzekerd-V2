@@ -2,12 +2,13 @@
 $title = get_field('title');
 $text = get_field('text');
 $cards = get_field('cards');
+$style = get_field('style');
 
 $id = get_field('id');
 ?>
 
 <section
-    class="contact-cards"
+    class="contact-cards <?php echo $style; ?>"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
@@ -38,6 +39,10 @@ $id = get_field('id');
 
                         <?php if (empty($card['text']) === false) {
                             echo $card['text'];
+                        } ?>
+
+                        <?php if(empty($card['button']) === false) {
+                            echo sprintf('<a href="%s" target="%s" class="btn-ghost">%s</a>', $card['button']['url'], $card['button']['target'], $card['button']['title']);
                         } ?>
                     </div>
                 <?php endforeach; ?>

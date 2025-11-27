@@ -21,6 +21,24 @@ input[type=submit] {
     border: 1px solid $orange;
     transition: all 0.3s ease-in-out;
 
+    &.link {
+        &:before {
+            @extend .icon-font;
+            content: '\e917';
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &.download {
+        &:before {
+            @extend .icon-font;
+            content: '\e916';
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+    }
+
     &:hover,
     &:focus {
         background: $light-blue !important;
@@ -51,6 +69,24 @@ input[type=submit] {
     box-shadow: none;
     border: 1px solid $text;
     transition: all 0.3s ease-in-out;
+
+    &.link {
+        &:before {
+            @extend .icon-font;
+            content: '\e917';
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &.download {
+        &:before {
+            @extend .icon-font;
+            content: '\e916';
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+    }
 
     &.small {
         padding: 5px 15px !important;

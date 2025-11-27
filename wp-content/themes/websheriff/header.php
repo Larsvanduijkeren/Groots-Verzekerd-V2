@@ -25,6 +25,9 @@ $email = get_field('email', 'option');
 $app_link = get_field('app_link', 'option');
 $buttons = get_field('buttons', 'option');
 $mega_menus = get_field('mega_menus', 'option');
+$usps = get_field('usps', 'option');
+$short_rating_text = get_field('short_rating_text', 'option');
+
 ?>
 
 <span class="hamburger">
@@ -54,6 +57,28 @@ $mega_menus = get_field('mega_menus', 'option');
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="container">
+        <div class="flex-wrapper">
+            <?php if (empty($usps) === false) : ?>
+                <div class="usps">
+                    <?php foreach ($usps as $usp) : ?>
+                        <?php if (empty($usp['usp']) === false) : ?>
+                            <div class="usp"><?php echo $usp['usp']; ?></div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="rating-text">
+                <?php if (empty($short_rating_text) === false) {
+                    echo $short_rating_text;
+                } ?>
+            </div>
         </div>
     </div>
 </div>
