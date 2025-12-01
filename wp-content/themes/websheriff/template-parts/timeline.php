@@ -9,6 +9,6 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <h2>timeline</h2>
+        <h3>Redesign for timeline component is pending. Dev on hold.</h3>
     </div>
 </section>

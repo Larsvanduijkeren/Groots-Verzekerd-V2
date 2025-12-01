@@ -31,10 +31,13 @@ section.form {
             font-size: 1.1rem;
 
             .contact {
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 margin-bottom: 20px;
                 justify-content: flex-start;
+                background: #A0E7E7;
+                padding: 20px;
+                border-radius: $radius-small;
 
                 img {
                     width: 50px;

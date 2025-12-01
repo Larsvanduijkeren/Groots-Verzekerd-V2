@@ -1,6 +1,6 @@
 footer.footer {
     .container {
-        padding-top: 0 !important;
+        padding-top: 40px !important;
         padding-bottom: 40px !important;
     }
 
@@ -89,6 +89,13 @@ footer.footer {
                     margin: 0 0 10px 0;
                     padding: 0;
                     list-style: none;
+
+                    &.current-menu-item,
+                    &.current_page_item {
+                        a {
+                            color: $orange;
+                        }
+                    }
 
                     a {
                         font-weight: 400;
