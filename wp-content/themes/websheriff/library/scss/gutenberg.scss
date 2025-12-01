@@ -4,9 +4,9 @@
 @font-face {
     font-family: 'Iconfont';
     src: url('../library/fonts/icomoon.eot'),
-        url('../library/fonts/icomoon.woff') format('woff'),
-        url('../library/fonts/icomoon.ttf') format('truetype'),
-        url('../library/fonts/icomoon.svg') format('svg');
+    url('../library/fonts/icomoon.woff') format('woff'),
+    url('../library/fonts/icomoon.ttf') format('truetype'),
+    url('../library/fonts/icomoon.svg') format('svg');
     font-style: normal;
     font-weight: normal;
 }
@@ -74,7 +74,6 @@
     @import "partials/components/gutenberg/values";
     @import "partials/components/gutenberg/pricing";
     @import "partials/components/gutenberg/text-cards";
-
 
     .card {
         max-width: 100%;

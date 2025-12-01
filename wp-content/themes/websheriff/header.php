@@ -39,7 +39,7 @@ $short_rating_text = get_field('short_rating_text', 'option');
     <div class='content'>
         <div class='nav'>
             <div class='flex-wrapper'>
-                <?php wp_nav_menu(['theme_location' => 'header-nav']); ?>
+                <?php wp_nav_menu(['theme_location' => 'main-nav']); ?>
             </div>
 
             <?php if (empty($buttons) === false) :
@@ -52,11 +52,15 @@ $short_rating_text = get_field('short_rating_text', 'option');
                         }
                         ?>
                         <?php if (empty($button['button']) === false) {
-                        echo sprintf('<a href="%s" target="%s" class="%s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
+                        echo sprintf('<a href="%s" target="%s" class="small %s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
                     } ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
+
+            <div class="small-menu">
+                <?php wp_nav_menu(['theme_location' => 'header-top-nav']); ?>
+            </div>
         </div>
     </div>
 </div>

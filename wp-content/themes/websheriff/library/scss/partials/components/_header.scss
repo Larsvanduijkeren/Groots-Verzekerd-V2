@@ -33,7 +33,7 @@
     background: $blue;
     color: $white;
     width: 100%;
-    z-index: 80;
+    z-index: 160;
 
     .flex-wrapper {
         display: flex;
@@ -109,7 +109,6 @@ header.header {
 
         .logo {
             display: block;
-            height: 75px;
             margin-right: 60px;
             font-size: 0;
             flex-grow: 0;
@@ -117,7 +116,7 @@ header.header {
 
             img {
                 display: block;
-                height: 100%;
+                height: 75px;
             }
         }
 
@@ -477,6 +476,7 @@ header.header {
         .top-bar {
             top: 32px;
         }
+
         .mega-menu {
             top: 222px;
             height: calc(100% - 222px);
@@ -489,19 +489,34 @@ header.header {
 }
 
 @media only screen and (max-width: 991px) {
-    header.header {
-        height: 60px;
+    .top-bar {
+        .usps {
+            width: 100%;
+            margin: 0;
 
-        .top-wrapper {
-            height: 60px;
-
-            > div {
-                display: none;
+            .usp {
+                justify-content: center;
             }
         }
 
-        .bottom-wrapper {
+        .rating-text {
             display: none;
+        }
+    }
+
+    header.header {
+        height: 60px;
+
+        .flex-wrapper {
+            height: 60px;
+
+            .logo img {
+                height: 45px;
+            }
+
+            .header-wrapper {
+                display: none;
+            }
         }
     }
 }

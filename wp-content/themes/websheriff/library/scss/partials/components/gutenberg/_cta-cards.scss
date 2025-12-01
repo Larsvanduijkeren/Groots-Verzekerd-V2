@@ -1,5 +1,6 @@
 section.home-hero + section.cta-cards {
     margin-top: -40px;
+
     .container {
         padding-top: 0 !important;
     }
@@ -24,7 +25,7 @@ section.cta-cards {
             background: white;
             border-radius: $radius-mid;
             padding: 40px;
-            border: 1px solid rgba(0,0,0,0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             align-items: flex-start;

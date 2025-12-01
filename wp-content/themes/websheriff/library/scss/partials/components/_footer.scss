@@ -118,6 +118,10 @@ footer.footer {
         flex-wrap: wrap;
         margin: 40px -20px -20px -20px;
 
+        span {
+            display: block;
+        }
+
         > * {
             width: calc(33.333% - 40px);
             max-width: calc(33.333% - 40px);
@@ -139,5 +143,43 @@ footer.footer {
         padding-top: 20px;
         border-top: 1px solid $text;
         font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    footer.footer {
+        .card {
+            padding: 20px;
+        }
+
+        .disclaimer {
+            margin-top: 20px;
+        }
+
+        .flex-wrapper,
+        .copyright-wrapper {
+            display: block;
+            margin: 0;
+
+            > * {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 20px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .to-top {
+                display: none;
+            }
+        }
+
+        .copyright-wrapper > * {
+            text-align: center !important;
+            margin-top: 20px;
+        }
     }
 }

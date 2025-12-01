@@ -24,16 +24,14 @@
         position: relative;
         width: 100%;
         font-size: 1.2rem;
-        font-weight: 400;
-        font-family: $font-body;
         margin-bottom: 20px;
         cursor: pointer;
         color: $text;
 
         &:before {
             @extend .icon-font;
-            content: '\e90a';
-            font-size: .8rem;
+            content: '\e910';
+            font-size: .9rem;
             margin-right: 10px;
             transition: transform .3s ease-in-out;
             transform: scaleX(-1);
@@ -183,8 +181,8 @@
 
 @media only screen and (max-width: 991px) {
     .mega-menu {
-        top: 60px;
-        height: calc(100% - 60px);
+        top: 100px;
+        height: calc(100% - 100px);
 
         .container {
             padding: 20px 40px !important;
@@ -202,7 +200,7 @@
             border-radius: 0;
             overflow-y: auto;
             margin-top: 0;
-            background: $white;
+            background: $light-blue;
 
             .container {
                 padding-bottom: 20px !important;
@@ -234,34 +232,6 @@
 
                 .column.card + .column.card {
                     margin-top: -10px;
-                }
-
-                .column.card .card {
-                    border-radius: $radius-mid;
-                    padding: 10px 20px;
-                    margin-bottom: 10px;
-
-                    &.white {
-                        background: $white;
-                    }
-
-                    .image {
-                        display: none;
-                    }
-
-                    .h4 {
-                        display: none;
-                    }
-
-                    p {
-                        display: none;
-                    }
-
-                    .btn-text {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                    }
                 }
             }
         }
