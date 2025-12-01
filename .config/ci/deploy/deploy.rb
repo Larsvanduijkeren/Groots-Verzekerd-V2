@@ -2,8 +2,8 @@
 lock "~> 3.17.0"
 
 # application and repo settings
-set :application, "spotenergie"
-set :repo_url, "git@github.com:Larsvanduijkeren/spot-energie.git"
+set :application, "grootsverzekerd"
+set :repo_url, "git@github.com:Larsvanduijkeren/Groots-Verzekerd-V2.git"
 
 # branch = environment
 set :branch, "master"
@@ -11,7 +11,7 @@ set :branch, "master"
 set :deploy_user, "deploy"
 
 # target deployment
-set :deploy_to, "/var/www/html/spotenergie"
+set :deploy_to, "/var/www/html/grootsverzekerd"
 
 set :theme_folder, "wp-content/themes/websheriff"
 set :root_folder, "../.."
