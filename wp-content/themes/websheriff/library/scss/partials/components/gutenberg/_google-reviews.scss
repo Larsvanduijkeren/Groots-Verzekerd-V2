@@ -64,3 +64,25 @@ section.google-reviews {
 
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.google-reviews .card {
+        padding: 20px;
+
+        .top-wrap {
+            display: block;
+            margin: 0 0 20px 0;
+
+            > * {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 10px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -65,3 +65,22 @@ section.cta {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.cta .flex-wrapper {
+        display: block;
+        margin: 0;
+
+        > *:first-child,
+        > *:last-child {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+            margin: 0 0 20px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

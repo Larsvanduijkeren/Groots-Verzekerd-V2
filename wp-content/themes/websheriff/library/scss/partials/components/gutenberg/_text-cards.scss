@@ -65,3 +65,40 @@ section.text-cards {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.text-cards .flex-wrapper {
+        display: block;
+        margin: 0;
+
+        > * {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+            margin: 0 0 20px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section.text-cards .flex-wrapper .cards-wrapper {
+        display: block;
+        margin: 0;
+
+        > * {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+            margin: 0 0 20px 0;
+            padding: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -209,6 +209,11 @@
         content: '\e908';
     }
 
+    &.twitter::before {
+        content: '\e90c';
+    }
+
+
     &.instagram::before {
         content: '\e901';
     }
@@ -297,6 +302,13 @@ button.lity-close:after {
 }
 
 @media only screen and (max-width: 991px) {
+    .rating-text {
+        &:before {
+            content: '\e918';
+            font-size: 1.25rem;
+        }
+    }
+
     .page-content {
         padding-top: 60px;
     }
