@@ -4,7 +4,6 @@ jQuery.noConflict();
     $(document).ready(function () {
         smoothScroll();
         menu();
-        accordion();
         headerController();
         megaMenus();
         reviewSlider();
