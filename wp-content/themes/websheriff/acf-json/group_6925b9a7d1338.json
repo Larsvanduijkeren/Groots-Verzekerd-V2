@@ -3,6 +3,38 @@
     "title": "PT: Review",
     "fields": [
         {
+            "key": "field_69382fd652d17",
+            "label": "Score",
+            "name": "score",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5"
+            },
+            "default_value": 5,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_6925b9a7de975",
             "label": "Title",
             "name": "title",
@@ -132,5 +164,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764080072
+    "modified": 1765289952
 }

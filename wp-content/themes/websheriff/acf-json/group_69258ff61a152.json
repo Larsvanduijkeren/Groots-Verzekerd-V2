@@ -1,6 +1,6 @@
 {
     "key": "group_69258ff61a152",
-    "title": "Block: Google Reviews",
+    "title": "Block: Reviews",
     "fields": [
         {
             "key": "field_69258ff61ba98",
@@ -42,9 +42,30 @@
             "append": ""
         },
         {
-            "key": "field_692d582889e9a",
-            "label": "Review cards",
-            "name": "review_cards",
+            "key": "field_69382e451b4fe",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_69382e4a1b4ff",
+            "label": "Buttons",
+            "name": "buttons",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -55,7 +76,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -64,11 +85,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_692d582e89e9b",
-                    "label": "Logo",
-                    "name": "logo",
+                    "key": "field_69382eac6c231",
+                    "label": "Button",
+                    "name": "button",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -78,46 +99,15 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "medium",
-                    "parent_repeater": "field_692d582889e9a"
-                },
-                {
-                    "key": "field_692d583589e9c",
-                    "label": "Text",
-                    "name": "text",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_692d582889e9a"
+                    "parent_repeater": "field_69382e4a1b4ff"
                 }
             ]
         },
         {
-            "key": "field_692d583f89e9d",
-            "label": "Google reviews shortcode",
-            "name": "google_reviews_shortcode",
+            "key": "field_69382e531b500",
+            "label": "Reviews title",
+            "name": "reviews_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -134,6 +124,96 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_69382e581b501",
+            "label": "Reviews button",
+            "name": "reviews_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_69382e5e1b502",
+            "label": "Reviews taxonomy",
+            "name": "reviews_taxonomy",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "review_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_69382e719d001",
+            "label": "Reviews score",
+            "name": "reviews_score",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_69382e7e9d002",
+            "label": "Reviews logo",
+            "name": "reviews_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -141,7 +221,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/google-reviews"
+                "value": "all"
             }
         ]
     ],
@@ -155,5 +235,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764579398
+    "modified": 1765289649
 }

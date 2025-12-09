@@ -28,7 +28,7 @@ add_action('acf/init', function () {
             'values'              => 'Values',
             'team-selection'      => 'Team Selection',
             'post-selection'      => 'Post Selection',
-            'google-reviews'      => 'Google Reviews',
+            'reviews'      => 'Reviews',
             'insurance-selection' => 'Insurance Selection',
             'text'                => 'Text',
             'text-image'          => 'Text Image',
