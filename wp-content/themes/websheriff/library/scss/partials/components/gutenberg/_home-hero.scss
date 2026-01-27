@@ -39,9 +39,20 @@ section.home-hero {
             position: relative;
             display: block;
 
+            &:before {
+                content: '';
+                display: block;
+                padding-top: 95%;
+            }
+
             img {
                 display: block;
                 width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                object-fit: cover;
                 clip-path: url(#imageCloverClip);
             }
 

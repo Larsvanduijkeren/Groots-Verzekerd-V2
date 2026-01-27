@@ -43,7 +43,7 @@ if (!empty($selection)) {
         <?php endif; ?>
 
         <?php if (!empty($team_members)) : ?>
-            <div class="flex-wrapper">
+            <div class="slider" data-aos="fade-up">
                 <?php
                 global $post;
 
@@ -56,7 +56,7 @@ if (!empty($selection)) {
                     $team_phone = get_field('phone', $post->ID);
                     $team_email = get_field('email', $post->ID);
                     ?>
-                    <div class="single-team-member" data-aos="fade-up">
+                    <div class="single-team-member" >
                         <?php if (!empty($team_image)) : ?>
                             <span class="image">
                                 <img src="<?php echo esc_url($team_image['sizes']['large']); ?>"
@@ -66,7 +66,7 @@ if (!empty($selection)) {
                                     <defs>
                                         <clipPath id="imageCloverClip" clipPathUnits="objectBoundingBox">
                                             <path id="Path_5329" data-name="Path 5329"
-                                                  d="m0.734,0.139 l0.021,0.121 c0.008,0.045,0.034,0.084,0.072,0.109 l0.103,0.067 c0.124,0.081,0.084,0.273,-0.062,0.298 l-0.121,0.021 c-0.045,0.008,-0.084,0.034,-0.109,0.072 l-0.067,0.103 c-0.081,0.124,-0.273,0.084,-0.298,-0.062 l-0.021,-0.121 c-0.008,-0.045,-0.034,-0.084,-0.072,-0.109 l-0.103,-0.067 C-0.047,0.488,-0.008,0.297,0.139,0.272 l0.121,-0.021 c0.045,-0.008,0.084,-0.034,0.109,-0.072 l0.067,-0.103 c0.081,-0.124,0.273,-0.084,0.298,0.062"
+                                                  d="M0.731,0.136 L0.752,0.257 C0.76,0.301,0.785,0.341,0.823,0.366 L0.926,0.433 C1,0.514,1,0.706,0.864,0.731 L0.743,0.752 C0.699,0.76,0.659,0.785,0.634,0.823 L0.567,0.926 C0.486,1,0.294,1,0.269,0.864 L0.248,0.743 C0.24,0.699,0.215,0.659,0.177,0.634 L0.074,0.567 C-0.05,0.486,-0.01,0.294,0.136,0.269 L0.257,0.248 C0.301,0.24,0.341,0.215,0.366,0.177 L0.433,0.074 C0.514,-0.05,0.706,-0.01,0.731,0.136 L0.731,0.136"
                                                   fill="none" stroke="#e02c39" stroke-width="3"/>
                                         </clipPath>
                                     </defs>

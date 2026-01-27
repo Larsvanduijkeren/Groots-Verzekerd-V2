@@ -11,6 +11,7 @@ jQuery.noConflict();
         postIndex();
         headerUsps();
         scrollToTop();
+        teamSlider();
 
         if ($(window).width() > 991) {
             lenis();
@@ -98,6 +99,34 @@ jQuery.noConflict();
             }
         });
     };
+
+    const teamSlider = () => {
+        let slider = $("section.team-selection .slider");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                infinite: false,
+                dots: true,
+                arrows: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        }
+    }
 
     const reviewSlider = () => {
         let slider = $("section.review-slider .card");
