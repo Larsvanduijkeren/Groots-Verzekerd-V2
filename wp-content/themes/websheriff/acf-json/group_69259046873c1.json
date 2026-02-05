@@ -68,7 +68,7 @@
             "name": "questions",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Field will be removed in a future update. Please manage questions from the main WordPress sidebar navigation.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -129,6 +129,32 @@
                     "parent_repeater": "field_6928144efc163"
                 }
             ]
+        },
+        {
+            "key": "field_698481b9092c0",
+            "label": "Selection",
+            "name": "selection",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "question_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -150,5 +176,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764234367
+    "modified": 1770291655
 }
