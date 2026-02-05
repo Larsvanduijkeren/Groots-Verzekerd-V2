@@ -3,6 +3,24 @@ include 'includes/acf-content-blocks.php';
 include 'includes/post-types.php';
 include 'includes/taxonomies.php';
 
+/**
+ * Index status in admin bar
+ */
+add_action('admin_bar_menu', function ($bar) {
+    if (!current_user_can('manage_options')) return;
+    
+    $noindex = get_option('blog_public') == '0';
+    
+    $bar->add_node([
+        'id'    => 'index-status',
+        'title' => sprintf(
+            '<span style="background:%s;color:#fff;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600;">%s</span>',
+            $noindex ? '#dc3232' : '#46b450',
+            $noindex ? 'No index' : 'Index'
+        ),
+    ]);
+}, 100);
+
 // ACF options page
 add_action('init', function () {
     if (function_exists('acf_add_options_page')) {

@@ -48,6 +48,32 @@ section.hero {
                 .rating-text {
                     color: $text-light;
                 }
+
+                &.has-image {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: row;
+
+                    .info {
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        padding-right: 10px;
+                        align-self: flex-start;
+                    }
+
+                    img {
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        margin-bottom: -40px;
+                        width: 150px;
+                        max-width: 30%;
+                        max-height: 80%;
+                        object-fit: contain;
+                        object-position: right bottom;
+                        margin-right: -20px;
+                    }
+                }
             }
         }
     }
@@ -73,8 +99,22 @@ section.hero {
 
                 .cta {
                     padding: 20px;
+
+                    &.has-image {
+                        img {
+                            width: 80px;
+                            margin-bottom: -20px;
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.hero.left .flex-wrapper .cta.has-image img {
+        display: none;
     }
 }

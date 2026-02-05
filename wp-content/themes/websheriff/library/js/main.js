@@ -12,6 +12,7 @@ jQuery.noConflict();
         headerUsps();
         scrollToTop();
         teamSlider();
+        timelineSlider();
 
         if ($(window).width() > 991) {
             lenis();
@@ -100,6 +101,19 @@ jQuery.noConflict();
         });
     };
 
+    const timelineSlider = () => {
+        let slider = $("section.timeline .slider");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                infinite: false,
+                dots: false,
+                arrows: true,
+                variableWidth: true,
+            });
+        }
+    }
+
     const teamSlider = () => {
         let slider = $("section.team-selection .slider");
 
@@ -108,9 +122,15 @@ jQuery.noConflict();
                 infinite: false,
                 dots: true,
                 arrows: false,
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 responsive: [
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    },,
                     {
                         breakpoint: 1200,
                         settings: {

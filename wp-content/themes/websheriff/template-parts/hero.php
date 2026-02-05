@@ -1,13 +1,14 @@
 <?php
-$title = get_field('title');
-$text = get_field('text');
-$buttons = get_field('buttons');
-$alignment = get_field('alignment');
-$cta_title = get_field('cta_title');
-$cta_text = get_field('cta_text');
-$rating_text = get_field('rating_text', 'option');
-
-$id = get_field('id');
+    $title = get_field('title');
+    $text = get_field('text');
+    $buttons = get_field('buttons');
+    $alignment = get_field('alignment');
+    $cta_title = get_field('cta_title');
+    $cta_text = get_field('cta_text');
+    $cta_image = get_field('cta_image');
+    $rating_text = get_field('rating_text', 'option');
+    
+    $id = get_field('id');
 ?>
 
 <section
@@ -22,11 +23,11 @@ $id = get_field('id');
                 <?php if (empty($title) === false) : ?>
                     <h1><?php echo $title; ?></h1>
                 <?php endif; ?>
-
+                
                 <?php if (empty($text) === false) {
                     echo $text;
                 } ?>
-
+                
                 <?php if (empty($buttons) === false) :
                     $class = 'btn';
                     ?>
@@ -43,17 +44,25 @@ $id = get_field('id');
                     </div>
                 <?php endif; ?>
             </div>
-
+            
             <?php if (empty($cta_title) === false) : ?>
-                <div class="cta">
-                    <h2 class="h4"><?php echo $cta_title; ?></h2>
-
-                    <?php if (empty($cta_text) === false) {
-                        echo $cta_text;
-                    } ?>
-
-                    <?php if (empty($rating_text) === false) : ?>
-                        <p class="rating-text"><?php echo $rating_text; ?></p>
+                <div class="cta <?php if(empty($cta_image) === false) {
+                    echo 'has-image';
+                } ?>">
+                    <div class="info">
+                        <h2 class="h4"><?php echo $cta_title; ?></h2>
+                        
+                        <?php if (empty($cta_text) === false) {
+                            echo $cta_text;
+                        } ?>
+                        
+                        <?php if (empty($rating_text) === false) : ?>
+                            <p class="rating-text"><?php echo $rating_text; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    
+                    <?php if (empty($cta_image) === false) : ?>
+                        <img src="<?php echo $cta_image['sizes']['medium']; ?>" alt="<?php echo $cta_image['alt']; ?>">
                     <?php endif; ?>
                 </div>
             <?php endif; ?>

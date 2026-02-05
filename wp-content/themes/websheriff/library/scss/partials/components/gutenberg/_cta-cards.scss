@@ -31,6 +31,32 @@ section.cta-cards {
             align-items: flex-start;
             justify-content: flex-start;
 
+            &.has-image {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                flex-direction: row;
+
+                .info {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    padding-right: 10px;
+                    align-self: flex-start;
+                }
+
+                img {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    margin-bottom: -40px;
+                    width: 200px;
+                    max-width: 30%;
+                    max-height: 80%;
+                    object-fit: contain;
+                    object-position: right bottom;
+                    margin-right: -20px;
+                }
+            }
+
             .btn {
                 margin-top: auto;
                 margin-bottom: 20px;
@@ -55,9 +81,23 @@ section.cta-cards {
             margin: 0 0 20px 0;
             padding: 20px;
 
+            &.has-image {
+                img {
+                    width: 80px;
+                    margin-bottom: -20px;
+                    margin-right: 0;
+                }
+            }
+
             &:last-child {
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.cta-cards .flex-wrapper > *.has-image img {
+        display: none;
     }
 }
