@@ -31,6 +31,22 @@ section.cta-cards {
             align-items: flex-start;
             justify-content: flex-start;
 
+            .rating-text {
+                color: #8f8fa4;
+            }
+
+            @media only screen and (min-width: 991px) {
+                .rating-text {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+            
+                    &:before {
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+
             &.has-image {
                 display: flex;
                 align-items: flex-end;

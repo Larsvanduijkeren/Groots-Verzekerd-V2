@@ -152,6 +152,28 @@
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
                     "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
+                    "key": "field_6992e14117628",
+                    "label": "Rating text",
+                    "name": "rating_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6925a9102d9c8"
                 }
             ]
         }
@@ -175,5 +197,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770288729
+    "modified": 1771233634
 }
