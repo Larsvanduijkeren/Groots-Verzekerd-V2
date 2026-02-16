@@ -1,0 +1,249 @@
+section.vacancy-hero {
+    position: relative;
+    overflow: visible !important;
+
+    .arrow {
+        position: absolute;
+        left: 45%;
+        bottom: 40px;
+        width: 175px;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        transform: translateX(-50%);
+    }
+
+    .label {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 48px;
+    }
+}
+
+section.vacancy-content {
+    overflow: visible !important;
+
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        .sidebar {
+            width: 400px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-top: -140px;
+
+            .sticky {
+                position: sticky;
+                top: 200px;
+            }
+
+            .card {
+                margin-bottom: 20px;
+                font-size: .9rem;
+                display: block;
+
+                a {
+                    font-weight: 400;
+                    text-decoration: underline;
+                }
+
+                .btn {
+                    text-decoration: none;
+                }
+
+                .card-content {
+                    padding: 30px;
+                    border-radius: $radius-mid $radius-mid 0 0;
+                    background: $lighter-blue;
+
+                    >*:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .contact-information {
+                    padding: 30px;
+                    border-radius: 0 0 $radius-mid $radius-mid;
+                    background: #EEF1F2;
+
+                    >*:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                h4 {
+                    font-weight: 700;
+                }
+
+                .author {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+
+                    img {
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        height: 150px;
+                        display: block;
+                        max-height: 90%;
+                        margin-bottom: -30px;
+                    }
+
+                    .info {
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        padding-right: 20px;
+                        align-self: flex-start;
+
+                        .btn {
+                            margin-top: 20px;
+                            display: block;
+                        }
+
+                        .name {
+                            opacity: .8;
+                            font-weight: 400;
+                            font-size: .9rem;
+                        }
+
+                        >*:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            width: calc(100% - 400px);
+            flex-grow: 0;
+            flex-shrink: 0;
+            padding-right: 80px;
+            max-width: 900px;
+
+            h2,
+            h3 {
+                margin-top: 40px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            img {
+                display: block;
+                margin-bottom: 20px;
+                border-radius: $radius-mid;
+            }
+
+            >*:last-child {
+                margin-bottom: 0;
+            }
+
+
+            .testimonial {
+                background: $white;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: $radius-mid;
+                padding: 30px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+
+                img {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    height: 200px;
+                    display: block;
+                    max-height: 90%;
+                    margin-bottom: -30px;
+                }
+
+                .info {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    padding-right: 20px;
+
+                    p {
+                        opacity: .75;
+                    }
+
+                    .author {
+                        opacity: .8;
+                        font-weight: 700;
+                        font-size: .9rem;
+                    }
+
+                    >*:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    section.vacancy-hero {
+        .arrow {
+            display: none;
+        }
+
+        h1 {
+            font-size: 36px !important;
+        }
+    }
+
+    section.vacancy-content {
+        .flex-wrapper {
+            display: block;
+
+            .sidebar {
+                width: 100%;
+                margin-top: 0;
+
+
+                .card-content {
+                    padding: 20px !important;
+
+                    .info {
+                        padding-right: 0 !important;
+                    }
+
+                    .author img {
+                        display: none;
+                    }
+                }
+
+                .contact-information {
+                    padding: 20px !important;
+                }
+            }
+
+            .content {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 40px 0;
+                padding-right: 0;
+
+                .testimonial {
+                    padding: 20px;
+
+                    img {
+                        height: 150px;
+                        margin-bottom: -20px !important;
+                    }
+                }
+            }
+        }
+    }
+}

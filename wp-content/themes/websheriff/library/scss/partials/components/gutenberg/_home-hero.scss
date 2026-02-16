@@ -1,4 +1,43 @@
 section.home-hero {
+
+
+    .meta {
+        margin-bottom: -10px;
+        margin-top: 40px;
+
+        > * {
+            display: inline-flex;
+            margin: 0 20px 10px 0;
+            align-items: center;
+            justify-content: flex-start;
+
+            &:before {
+                @extend .icon-font;
+                content: '\e919';
+                width: 40px;
+                height: 40px;
+                background: white;
+                color: $text;
+                border-radius: 100%;
+                margin-right: 10px;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.contract:before {
+                content: '\e91a';
+                font-size: 23px;
+            }
+
+            &.location:before {
+                content: '\e91b';
+                font-size: 23px;
+            }
+        }
+    }
+
     .flex-wrapper {
         display: flex;
         align-items: center;
@@ -87,6 +126,14 @@ section.home-hero {
 
 @media only screen and (max-width: 991px) {
     section.home-hero {
+.meta {
+    margin-top: 20px;
+    > * {
+        display: flex;
+        margin-bottom: 10px;
+    }
+}   
+
         .flex-wrapper {
             display: block;
             margin: 0;

@@ -11,7 +11,7 @@ section.hero {
                 font-weight: 700;
             }
 
-            > *:last-child {
+            >*:last-child {
                 margin-bottom: 0;
             }
         }
@@ -29,13 +29,13 @@ section.hero {
                 font-size: 1.1rem;
             }
 
-            > * {
+            >* {
                 width: calc(50% - 80px);
                 max-width: calc(50% - 80px);
                 flex-basis: calc(50% - 80px);
                 margin: 40px;
 
-                > *:last-child {
+                >*:last-child {
                     margin-bottom: 0;
                 }
             }
@@ -86,7 +86,7 @@ section.hero {
                 display: block;
                 margin: 0;
 
-                > * {
+                >* {
                     width: 100%;
                     max-width: 100%;
                     flex-basis: 100%;

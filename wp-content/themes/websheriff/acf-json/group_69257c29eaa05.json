@@ -915,6 +915,27 @@
             "selected": 0
         },
         {
+            "key": "field_6992d9c553ee1",
+            "label": "Vacancy contact information",
+            "name": "vacancy_contact_information",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_6992cf609ee8e",
             "label": "Vacancy CTA title",
             "name": "vacancy_cta_title",
@@ -1119,5 +1140,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771229876
+    "modified": 1771231708
 }

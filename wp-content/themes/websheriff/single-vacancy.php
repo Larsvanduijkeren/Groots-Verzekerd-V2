@@ -18,6 +18,8 @@ $vacancy_cta_text = get_field('vacancy_cta_text', 'option');
 $vacancy_cta_image = get_field('vacancy_cta_image', 'option');
 $vacancy_cta_author = get_field('vacancy_cta_author', 'option');
 
+$vacancy_contact_information = get_field('vacancy_contact_information', 'option');
+
 $vacancy_timeline = get_field('vacancy_timeline', 'option');
 $vacancy_form = get_field('vacancy_form', 'option');
 
@@ -26,7 +28,9 @@ $id = get_the_id();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <section class="home-hero light-blue">
+        <section class="home-hero vacancy-hero light-blue">
+            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/library/images/arrow.svg" alt="Vacature hero arrow">
+
             <div class="container">
                 <div class="flex-wrapper">
                     <div class="content">
@@ -84,7 +88,7 @@ $id = get_the_id();
                                 <div class="info">
                                     <h4><?php echo $testimonial_title; ?></h4>
                                     <p><?php echo $testimonial_text; ?></p>
-                                    <span class="author"><?php echo $testimonial_author; ?></p>
+                                    <span class="author">- <?php echo $testimonial_author; ?></span>
                                 </div>
 
                                 <?php if (empty($testimonial_image) === false) : ?>
@@ -97,27 +101,35 @@ $id = get_the_id();
                     <div class='sidebar' data-aos="fade-up">
                         <div class='sticky'>
                             <div class="card">
-                                <?php if (empty($vacancy_cta_title) === false) : ?>
-                                    <h3><?php echo $vacancy_cta_title; ?></h3>
-                                <?php endif; ?>
+                                <div class="card-content">
+                                    <?php if (empty($vacancy_cta_title) === false) : ?>
+                                        <h4><?php echo $vacancy_cta_title; ?></h4>
+                                    <?php endif; ?>
 
-                                <?php if (empty($vacancy_cta_text) === false) {
-                                    echo $vacancy_cta_text;
-                                } ?>
+                                    <?php if (empty($vacancy_cta_text) === false) {
+                                        echo $vacancy_cta_text;
+                                    } ?>
 
-                                <?php if (empty($vacancy_cta_author) === false) : ?>
-                                    <div class="author">
-                                        <?php if (empty($vacancy_cta_image) === false) : ?>
-                                            <img src="<?php echo $vacancy_cta_image['sizes']['large']; ?>" alt="<?php echo $vacancy_cta_image['alt']; ?>">
-                                        <?php endif; ?>
+                                    <?php if (empty($vacancy_cta_author) === false) : ?>
+                                        <div class="author">
+                                            <div class="info">
+                                                <span class="name">- <?php echo $vacancy_cta_author; ?></span>
 
-                                        <div class="info">
-                                            <span class="name"><?php echo $vacancy_cta_author; ?></span>
+                                                <a href="#solliciteren" class="btn small">Solliciteer direct</a>
+                                            </div>
 
-                                            <a href="#solliciteren" class="btn">Solliciteer direct</a>
+                                            <?php if (empty($vacancy_cta_image) === false) : ?>
+                                                <img src="<?php echo $vacancy_cta_image['sizes']['large']; ?>" alt="<?php echo $vacancy_cta_image['alt']; ?>">
+                                            <?php endif; ?>
                                         </div>
-                                    </div>
-                                <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+
+                                <div class="contact-information">
+                                    <?php if (empty($vacancy_contact_information) === false) {
+                                        echo $vacancy_contact_information;
+                                    } ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -130,7 +142,7 @@ $id = get_the_id();
         <?php endif; ?>
 
         <?php if (!empty($vacancy_form)) : ?>
-            <?php get_template_part('template-parts/form', null, ['form' => $vacancy_form]); ?>
+            <?php get_template_part('template-parts/form', null, ['form' => array_merge($vacancy_form, ['id' => 'solliciteren'])]); ?>
         <?php endif; ?>
 
 <?php

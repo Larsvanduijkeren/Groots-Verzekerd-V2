@@ -52,7 +52,7 @@
         {
             "key": "field_6992d361c70dd",
             "label": "Contract",
-            "name": "",
+            "name": "contract",
             "aria-label": "",
             "type": "text",
             "instructions": "i.e. Vast in dienst met proeftijd",
@@ -295,5 +295,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771230080
+    "modified": 1771230307
 }
