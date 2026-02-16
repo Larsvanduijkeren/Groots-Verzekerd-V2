@@ -1,11 +1,18 @@
-.page-404 {
+.not-found {
     .content {
         max-width: 600px;
         padding: 40px;
         text-align: center;
-        color: $white;
-        background: $blue;
+        background: $light-blue;
         border-radius: $radius-large;
         margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .not-found {
+        .content {
+            padding: 20px;
+        }
     }
 }

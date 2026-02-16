@@ -1,21 +1,39 @@
 <?php
-$style = get_field('style');
-$title = get_field('title');
-$text = get_field('text');
-$include_rating = get_field('include_rating');
-$add_contact_person = get_field('add_contact_person');
-$contact_cards = get_field('contact_cards');
-$contact_image = get_field('contact_image');
-$contact_name = get_field('contact_name');
-$contact_text = get_field('contact_text');
-$buttons = get_field('buttons');
-$form_title = get_field('form_title');
-$form_text = get_field('form_text');
-$form_shortcode = get_field('form_shortcode');
-$form_meta = get_field('form_meta');
+$form_data = (isset($args) && !empty($args['form'])) ? $args['form'] : null;
+if (!empty($form_data)) {
+    $style = $form_data['style'] ?? '';
+    $title = $form_data['title'] ?? '';
+    $text = $form_data['text'] ?? '';
+    $include_rating = $form_data['include_rating'] ?? false;
+    $add_contact_person = $form_data['add_contact_person'] ?? false;
+    $contact_cards = $form_data['contact_cards'] ?? [];
+    $contact_image = $form_data['contact_image'] ?? null;
+    $contact_name = $form_data['contact_name'] ?? '';
+    $contact_text = $form_data['contact_text'] ?? '';
+    $buttons = $form_data['buttons'] ?? [];
+    $form_title = $form_data['form_title'] ?? '';
+    $form_text = $form_data['form_text'] ?? '';
+    $form_shortcode = $form_data['form_shortcode'] ?? '';
+    $form_meta = $form_data['form_meta'] ?? '';
+    $id = $form_data['id'] ?? '';
+} else {
+    $style = get_field('style');
+    $title = get_field('title');
+    $text = get_field('text');
+    $include_rating = get_field('include_rating');
+    $add_contact_person = get_field('add_contact_person');
+    $contact_cards = get_field('contact_cards');
+    $contact_image = get_field('contact_image');
+    $contact_name = get_field('contact_name');
+    $contact_text = get_field('contact_text');
+    $buttons = get_field('buttons');
+    $form_title = get_field('form_title');
+    $form_text = get_field('form_text');
+    $form_shortcode = get_field('form_shortcode');
+    $form_meta = get_field('form_meta');
+    $id = get_field('id');
+}
 $rating_text = get_field('rating_text', 'option');
-
-$id = get_field('id');
 ?>
 
 <section

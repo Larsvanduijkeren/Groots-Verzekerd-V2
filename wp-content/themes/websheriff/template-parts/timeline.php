@@ -1,9 +1,16 @@
 <?php
-    $title = get_field('title');
-    $text = get_field('text');
-    $cards = get_field('cards');
-    
-    $id = get_field('id');
+    $timeline = (isset($args) && !empty($args['timeline'])) ? $args['timeline'] : null;
+    if (!empty($timeline)) {
+        $title = $timeline['title'] ?? '';
+        $text = $timeline['text'] ?? '';
+        $cards = $timeline['cards'] ?? [];
+        $id = $timeline['id'] ?? '';
+    } else {
+        $title = get_field('title');
+        $text = get_field('text');
+        $cards = get_field('cards');
+        $id = get_field('id');
+    }
 ?>
 
 <section
