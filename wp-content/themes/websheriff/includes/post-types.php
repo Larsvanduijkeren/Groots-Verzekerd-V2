@@ -50,6 +50,7 @@ function vacancy()
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
         'show_in_rest'        => false,
+        'rewrite' => array('slug' => 'vacature','with_front' => false),
     ];
     register_post_type('vacancy', $args);
 
