@@ -129,6 +129,11 @@ section.vacancy-content {
             padding-right: 80px;
             max-width: 900px;
 
+> img,
+> div {
+    max-width: 100%;
+}
+
             h2,
             h3 {
                 margin-top: 40px;
