@@ -13,6 +13,7 @@ jQuery.noConflict();
         scrollToTop();
         teamSlider();
         timelineSlider();
+        matchForm();
 
         if ($(window).width() > 991) {
             lenis();
@@ -233,6 +234,52 @@ jQuery.noConflict();
             $("html, body").animate({
                 scrollTop: $($.attr(this, "href")).offset().top - 120,
             }, 500);
+        });
+    };
+
+    const matchForm = () => {
+        $('section.match-form').each(function () {
+            const $section = $(this);
+            const $form = $section.find('.match-questions-form');
+            const $error = $section.find('.match-form-error');
+            const $matchCheckStep = $section.find('.step.match-check');
+            const $matchFormStep = $section.find('.step.match-form-step');
+            const $noMatchStep = $section.find('.step.no-match');
+
+            $form.find('input[type="radio"]').on('change', function () {
+                $error.addClass('hide');
+            });
+
+            $form.on('submit', function (e) {
+                e.preventDefault();
+                $error.addClass('hide');
+
+                let allAnswered = true;
+                let allYes = true;
+                $section.find('.match-question').each(function () {
+                    const selected = $(this).find('input[type="radio"]:checked');
+                    if (!selected.length) {
+                        allAnswered = false;
+                    } else if (selected.val() !== 'yes') {
+                        allYes = false;
+                    }
+                });
+
+                if (!allAnswered) {
+                    $error.removeClass('hide');
+                    return;
+                }
+
+                $matchCheckStep.addClass('hide');
+                $matchFormStep.addClass('hide');
+                $noMatchStep.addClass('hide');
+
+                if (allYes) {
+                    $matchFormStep.removeClass('hide');
+                } else {
+                    $noMatchStep.removeClass('hide');
+                }
+            });
         });
     };
 

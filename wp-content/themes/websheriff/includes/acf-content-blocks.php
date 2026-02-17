@@ -42,6 +42,7 @@ add_action('acf/init', function () {
             'text-cards'          => 'Text Cards',
             'vacancy-selection'   => 'Vacancy Selection',
             'pricing'             => 'Pricing',
+            'match-form'          => 'Match Form',
         ];
 
         foreach ($blocks as $name => $title) {
