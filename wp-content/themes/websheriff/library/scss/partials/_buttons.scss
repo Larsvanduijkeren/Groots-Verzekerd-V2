@@ -1,6 +1,7 @@
 .btn,
 button[type=submit]:not(.dgwt-wcas-search-submit),
-input[type=submit] {
+input[type=submit],
+.wpforms-page-button {
     appearance: none;
     -webkit-appearance: none;
     display: inline-flex;
