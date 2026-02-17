@@ -21,6 +21,48 @@
             "selected": 0
         },
         {
+            "key": "field_69944a1591bc5",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_69944a1991bc6",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_6925a9102d9c8",
             "label": "Cards",
             "name": "cards",
@@ -42,6 +84,55 @@
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
+                {
+                    "key": "field_69944a3291bc7",
+                    "label": "Add crosses to list items",
+                    "name": "add_crosses_to_list_items",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
+                    "key": "field_69944a4491bc8",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6925a9102d9c8"
+                },
                 {
                     "key": "field_6925a9172d9c9",
                     "label": "Title",
@@ -197,5 +288,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771233634
+    "modified": 1771326025
 }

@@ -1,4 +1,4 @@
-section.home-hero + section.cta-cards {
+section.home-hero+section.cta-cards {
     margin-top: -40px;
 
     .container {
@@ -17,7 +17,7 @@ section.cta-cards {
         flex-wrap: wrap;
         margin: -20px;
 
-        > * {
+        >* {
             width: calc(50% - 40px);
             max-width: calc(50% - 40px);
             flex-basis: calc(50% - 40px);
@@ -31,6 +31,22 @@ section.cta-cards {
             align-items: flex-start;
             justify-content: flex-start;
 
+            &.has-crosses {
+                ul li:before {
+                    content: '\e91d';
+                    color: rgba(0,0,0,0.4);
+                    top: 1px;
+                }
+            }
+
+            .icon {
+                display: block;
+                margin: 0 0 20px 0;
+                height: 50px;
+                width: auto;
+                max-width: 100%;
+            }
+
             .rating-text {
                 color: #8f8fa4;
             }
@@ -40,7 +56,7 @@ section.cta-cards {
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
-            
+
                     &:before {
                         margin: 0 0 10px 0;
                     }
@@ -60,7 +76,7 @@ section.cta-cards {
                     align-self: flex-start;
                 }
 
-                img {
+                .person {
                     flex-grow: 0;
                     flex-shrink: 0;
                     margin-bottom: -40px;
@@ -78,7 +94,7 @@ section.cta-cards {
                 margin-bottom: 20px;
             }
 
-            > *:last-child {
+            >*:last-child {
                 margin-bottom: 0;
             }
         }
@@ -90,7 +106,7 @@ section.cta-cards {
         display: block;
         margin: 0;
 
-        > * {
+        >* {
             width: 100%;
             max-width: 100%;
             flex-basis: 100%;
@@ -113,7 +129,7 @@ section.cta-cards {
 }
 
 @media only screen and (max-width: 600px) {
-    section.cta-cards .flex-wrapper > *.has-image img {
+    section.cta-cards .flex-wrapper>*.has-image img {
         display: none;
     }
 }
