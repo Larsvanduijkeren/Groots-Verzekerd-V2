@@ -10,6 +10,10 @@
     }
 }
 
+* {
+    word-break: break-word;
+}
+
 .grecaptcha-badge {
     visibility: hidden;
 }

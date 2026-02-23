@@ -8,15 +8,31 @@ section.text-image {
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
-        margin: -40px;
+        margin: -20px;
 
-        > * {
-            width: calc(50% - 80px);
-            max-width: calc(50% - 80px);
-            flex-basis: calc(50% - 80px);
-            margin: 40px;
+        >* {
+            width: calc(50% - 40px);
+            max-width: calc(50% - 40px);
+            flex-basis: calc(50% - 40px);
+            margin: 20px;
 
-            > *:last-child {
+            >*:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .content {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: $radius-mid;
+            padding: 30px;
+
+            .meta {
+                display: block;
+                margin-top: 10px;
+                opacity: .5;
+            }
+
+            >*:last-child {
                 margin-bottom: 0;
             }
         }
@@ -51,7 +67,7 @@ section.text-image {
         display: block;
         margin: 0;
 
-        > * {
+        >* {
             width: 100%;
             max-width: 100%;
             flex-basis: 100%;

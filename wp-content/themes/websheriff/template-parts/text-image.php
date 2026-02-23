@@ -5,6 +5,7 @@ $title = get_field('title');
 $text = get_field('text');
 $buttons = get_field('buttons');
 $image = get_field('image');
+$meta = get_field('meta');
 
 $id = get_field('id');
 ?>
@@ -44,6 +45,10 @@ $id = get_field('id');
                         } ?>
                         <?php endforeach; ?>
                     </div>
+                <?php endif; ?>
+
+                <?php if (empty($meta) === false) : ?>
+                    <p class="meta"><?php echo $meta; ?></p>
                 <?php endif; ?>
             </div>
 
