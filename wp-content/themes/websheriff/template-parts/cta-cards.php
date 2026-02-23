@@ -33,6 +33,9 @@ $id = get_field('id');
                     <div class="card <?php if (empty($card['add_crosses_to_list_items']) === false) {
                                             echo ' has-crosses';
                                         }
+                                        if (empty($card['highlight_background']) === false) {
+                                            echo ' highlight-background';
+                                        }
                                         if (empty($card['image']) === false) {
                                             echo ' has-image';
                                         } ?>" data-aos="fade-up">

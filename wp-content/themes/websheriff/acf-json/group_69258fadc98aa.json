@@ -122,9 +122,31 @@
                     "message": "",
                     "default_value": 0,
                     "allow_in_bindings": 0,
-                    "ui": 0,
                     "ui_on_text": "",
                     "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
+                    "key": "field_699c5e405dbe6",
+                    "label": "Highlight background",
+                    "name": "highlight_background",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
                     "parent_repeater": "field_6925a9102d9c8"
                 },
                 {
@@ -398,5 +420,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771854795
+    "modified": 1771855453
 }
