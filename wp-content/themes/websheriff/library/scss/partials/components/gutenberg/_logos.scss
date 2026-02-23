@@ -4,22 +4,17 @@ section.logos {
         text-align: center;
     }
 
-    .flex-wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
+    .logos-slider {
         margin: -10px;
 
-        > * {
-            width: calc(16.666% - 20px);
-            max-width: calc(16.666% - 20px);
-            flex-basis: calc(16.666% - 20px);
-            margin: 10px;
+        .slide {
+            padding: 10px;
             position: relative;
             display: block;
             border: 1px solid rgba(0, 0, 0, 0.3);
             border-radius: $radius-mid;
+            box-sizing: border-box;
+            margin: 0 10px;
 
             &:before {
                 content: '';
@@ -27,8 +22,15 @@ section.logos {
                 display: block;
             }
 
-            > *:last-child {
-                margin-bottom: 0;
+            .image {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 10px;
+                box-sizing: border-box;
             }
 
             img {
@@ -43,29 +45,5 @@ section.logos {
                 transform: translate(-50%, -50%);
             }
         }
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    section.logos .flex-wrapper > * {
-        width: calc(20% - 20px);
-        max-width: calc(20% - 20px);
-        flex-basis: calc(20% - 20px);
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    section.logos .flex-wrapper > * {
-        width: calc(33.333% - 20px);
-        max-width: calc(33.333% - 20px);
-        flex-basis: calc(33.333% - 20px);
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    section.logos .flex-wrapper > * {
-        width: calc(50% - 20px);
-        max-width: calc(50% - 20px);
-        flex-basis: calc(50% - 20px);
     }
 }

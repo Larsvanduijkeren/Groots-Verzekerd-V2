@@ -13,6 +13,7 @@ jQuery.noConflict();
         scrollToTop();
         teamSlider();
         timelineSlider();
+        logosSlider();
         matchForm();
 
         if ($(window).width() > 991) {
@@ -111,6 +112,41 @@ jQuery.noConflict();
                 dots: false,
                 arrows: true,
                 variableWidth: true,
+            });
+        }
+    };
+
+    const logosSlider = () => {
+        let slider = $("section.logos .logos-slider");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: false,
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                variableWidth: false,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: { slidesToShow: 5 }
+                    },
+                    {
+                        breakpoint: 991,
+                        settings: { slidesToShow: 4 }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: { slidesToShow: 3 }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: { slidesToShow: 2 }
+                    }
+                ]
             });
         }
     }

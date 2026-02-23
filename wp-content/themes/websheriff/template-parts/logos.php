@@ -17,12 +17,14 @@ $id = get_field('id');
         <?php endif; ?>
 
         <?php if (empty($logos) === false) : ?>
-            <div class="flex-wrapper" data-aos="fade-up">
+            <div class="logos-slider" data-aos="fade-up">
                 <?php foreach ($logos as $logo) : ?>
                     <?php if (empty($logo) === false) : ?>
-                        <span class="image">
-                            <img src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>">
-                        </span>
+                        <div class="slide">
+                            <span class="image">
+                                <img src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>">
+                            </span>
+                        </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
