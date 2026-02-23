@@ -1,0 +1,62 @@
+section.usps {
+    .flex-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: -20px;
+
+        > * {
+            width: calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            flex-basis: calc(33.333% - 40px);
+            margin: 20px;
+            background: $white;
+            border-radius: $radius-mid;
+            padding: 40px;
+            color: $text;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+
+            img {
+                height: 50px;
+                display: block;
+                margin-bottom: 20px;
+            }
+ 
+            .btn {
+                margin-top: auto;
+            }
+
+            a {
+                color: $orange;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    section.usps .flex-wrapper {
+        display: block;
+        margin: 0;
+
+        > * {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+            margin: 0 0 20px 0;
+            padding: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -10,6 +10,32 @@ section.cta-cards {
     position: relative;
     z-index: 5;
 
+    &.comparison-grid-design {
+        .flex-wrapper {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px;
+            margin: 0;
+
+            > * {
+                width: 100%;
+                max-width: 100%;
+                grid-column: span 6;
+                grid-row: span 1;
+                margin: 0;
+
+                &:nth-child(2) {
+                    grid-row: span 2;
+                }
+
+                @media only screen and (max-width: 991px) {
+                    grid-column: span 12 !important;
+                    grid-row: span 1 !important;
+                }
+            }
+        }
+    }
+
     .flex-wrapper {
         display: flex;
         align-items: stretch;
@@ -114,7 +140,7 @@ section.cta-cards {
             padding: 20px;
 
             &.has-image {
-                img {
+                .person {
                     width: 80px;
                     margin-bottom: -20px;
                     margin-right: 0;

@@ -1,9 +1,9 @@
 {
-    "key": "group_6994262a3275f",
-    "title": "Block: Match Form",
+    "key": "group_699c5707d066c",
+    "title": "Block: Form (copy)",
     "fields": [
         {
-            "key": "field_6994262a133e0",
+            "key": "field_699c5707d2fd5",
             "label": "Content",
             "name": "",
             "aria-label": "",
@@ -21,7 +21,36 @@
             "selected": 0
         },
         {
-            "key": "field_69942680844da",
+            "key": "field_699c5707d3030",
+            "label": "Style",
+            "name": "style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "card": "Card",
+                "light-blue": "Wide"
+            },
+            "default_value": "card",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_699c5707d3088",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -42,7 +71,7 @@
             "append": ""
         },
         {
-            "key": "field_6994268d844db",
+            "key": "field_699c5707d30d8",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -63,11 +92,11 @@
             "delay": 0
         },
         {
-            "key": "field_6994269d844dc",
-            "label": "Rating text",
-            "name": "rating_text",
+            "key": "field_699c5707d3126",
+            "label": "Add contact cards",
+            "name": "add_contact_cards",
             "aria-label": "",
-            "type": "text",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -76,90 +105,30 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
+            "message": "",
+            "default_value": 0,
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         },
         {
-            "key": "field_69942deb95755",
-            "label": "Contact image",
-            "name": "contact_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_69942df895756",
-            "label": "Contact name",
-            "name": "contact_name",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69942dff95757",
-            "label": "Contact text",
-            "name": "contact_text",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6994264f133e1",
-            "label": "Match questions",
-            "name": "match_questions",
+            "key": "field_699c5707d3179",
+            "label": "Contact cards",
+            "name": "contact_cards",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_699c5707d3126",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -174,7 +143,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_69942d1239d88",
+                    "key": "field_699c5707de98c",
                     "label": "Icon",
                     "name": "icon",
                     "aria-label": "",
@@ -198,12 +167,12 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "thumbnail",
-                    "parent_repeater": "field_6994264f133e1"
+                    "parent_repeater": "field_699c5707d3179"
                 },
                 {
-                    "key": "field_69942671133e2",
-                    "label": "Question",
-                    "name": "question",
+                    "key": "field_699c5707de9db",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -220,16 +189,38 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_6994264f133e1"
+                    "parent_repeater": "field_699c5707d3179"
+                },
+                {
+                    "key": "field_699c5707dea2a",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_699c5707d3179"
                 }
             ]
         },
         {
-            "key": "field_69942adc05e0e",
-            "label": "Confirmed match",
-            "name": "",
+            "key": "field_699c5707d31c7",
+            "label": "Include rating",
+            "name": "include_rating",
             "aria-label": "",
-            "type": "tab",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -238,37 +229,19 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_69942ae705e0f",
-            "label": "Main form title",
-            "name": "main_form_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
+            "message": "",
+            "default_value": 1,
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         },
         {
-            "key": "field_69942aef05e10",
-            "label": "Main form text",
-            "name": "main_form_text",
+            "key": "field_699c5707d321b",
+            "label": "Add contact person",
+            "name": "add_contact_person",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -277,61 +250,30 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "message": "",
+            "default_value": 0,
             "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         },
         {
-            "key": "field_699426a3844dd",
-            "label": "Main form shortcode",
-            "name": "main_form_shortcode",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69942aaa05e0d",
-            "label": "No match",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_69942eb84c93a",
-            "label": "No match icon",
-            "name": "no_match_icon",
+            "key": "field_699c5707d326a",
+            "label": "Contact image",
+            "name": "contact_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_699c5707d321b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -350,9 +292,109 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_69942a7b05e0a",
-            "label": "No match title",
-            "name": "no_match_title",
+            "key": "field_699c5707d32c3",
+            "label": "Contact name",
+            "name": "contact_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_699c5707d321b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_699c5707d3310",
+            "label": "Contact text",
+            "name": "contact_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_699c5707d321b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_699c5707d335d",
+            "label": "Buttons",
+            "name": "buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_699c5707f03ca",
+                    "label": "Button",
+                    "name": "button",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_699c5707d335d"
+                }
+            ]
+        },
+        {
+            "key": "field_699c5707d33aa",
+            "label": "Form title",
+            "name": "form_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -371,9 +413,9 @@
             "append": ""
         },
         {
-            "key": "field_69942a8305e0b",
-            "label": "No match text",
-            "name": "no_match_text",
+            "key": "field_699c5707d3405",
+            "label": "Form text",
+            "name": "form_text",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -392,11 +434,11 @@
             "delay": 0
         },
         {
-            "key": "field_69942ec04c93b",
-            "label": "No match button",
-            "name": "no_match_button",
+            "key": "field_699c5707d3450",
+            "label": "Form shortcode",
+            "name": "form_shortcode",
             "aria-label": "",
-            "type": "link",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -405,8 +447,33 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "allow_in_bindings": 0
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_699c5707d349d",
+            "label": "Form meta",
+            "name": "form_meta",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -414,7 +481,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/match-form"
+                "value": "acf\/form"
             }
         ]
     ],
@@ -428,5 +495,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771318982
+    "modified": 1771853576
 }

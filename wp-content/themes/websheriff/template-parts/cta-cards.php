@@ -2,12 +2,15 @@
 $title = get_field('title');
 $text = get_field('text');
 $cards = get_field('cards');
+$comparison_grid_design = get_field('comparison_grid_design');
 
 $id = get_field('id');
 ?>
 
 <section
-    class="cta-cards"
+    class="cta-cards <?php if (empty($comparison_grid_design) === false) {
+        echo 'comparison-grid-design';
+    } ?>"
     id="<?php if (empty($id) === false) {
             echo $id;
         } ?>">
@@ -32,14 +35,15 @@ $id = get_field('id');
                                         } if (empty($card['image']) === false) {
                                             echo ' has-image';
                                         } ?>" data-aos="fade-up">
-                        <?php if (empty($card['title']) === false) : ?>
+                        
                             <div class="info">
                             <?php if (empty($card['icon']) === false) : ?>
                             <img class="icon" src="<?php echo $card['icon']['sizes']['medium']; ?>"
                                 alt="<?php echo $card['icon']['alt']; ?>">
                         <?php endif; ?>
-
+                        <?php if (empty($card['title']) === false) : ?>
                                 <h3><?php echo $card['title']; ?></h3>
+                                <?php endif; ?>
 
                                 <?php if (empty($card['text']) === false) {
                                     echo $card['text'];
@@ -62,7 +66,6 @@ $id = get_field('id');
                                 <img class="person" src="<?php echo $card['image']['sizes']['medium']; ?>"
                                     alt="<?php echo $card['image']['alt']; ?>">
                             <?php endif; ?>
-                        <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
             </div>

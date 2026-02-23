@@ -39,10 +39,12 @@ add_action('acf/init', function () {
             'form'                => 'Form',
             'emergency-contacts'  => 'Emergency Contacts',
             'faq'                 => 'FAQ',
+            'usps'                 => 'USPS',
             'text-cards'          => 'Text Cards',
             'vacancy-selection'   => 'Vacancy Selection',
             'pricing'             => 'Pricing',
             'match-form'          => 'Match Form',
+            'contact-cards'       => 'Contact Cards',
         ];
 
         foreach ($blocks as $name => $title) {

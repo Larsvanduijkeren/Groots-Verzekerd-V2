@@ -21,6 +21,27 @@
             "selected": 0
         },
         {
+            "key": "field_699c585b8c31a",
+            "label": "Comparison grid design",
+            "name": "comparison_grid_design",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
             "key": "field_69944a1591bc5",
             "label": "Title",
             "name": "title",
@@ -288,5 +309,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771326025
+    "modified": 1771853927
 }
