@@ -217,6 +217,24 @@
                     "parent_repeater": "field_6925a9102d9c8"
                 },
                 {
+                    "key": "field_699c5bacb1a2a",
+                    "label": "Extra button",
+                    "name": "extra_button",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
                     "key": "field_6925a9222d9cc",
                     "label": "Meta",
                     "name": "meta",
@@ -286,6 +304,77 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
+                    "key": "field_699c5bb9b1a2b",
+                    "label": "Author image",
+                    "name": "author_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
+                    "key": "field_699c5bc0b1a2c",
+                    "label": "Author title",
+                    "name": "author_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6925a9102d9c8"
+                },
+                {
+                    "key": "field_699c5bc6b1a2d",
+                    "label": "Author role",
+                    "name": "author_role",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6925a9102d9c8"
                 }
             ]
         }
@@ -309,5 +398,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771853927
+    "modified": 1771854795
 }
